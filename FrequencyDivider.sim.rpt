@@ -1,0 +1,313 @@
+Simulator report for FrequencyDivider
+Mon May 04 01:31:45 2015
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------+
+; Simulator Summary                           ;
++-----------------------------+---------------+
+; Type                        ; Value         ;
++-----------------------------+---------------+
+; Simulation Start Time       ; 0 ps          ;
+; Simulation End Time         ; 50.0 us       ;
+; Simulation Netlist Size     ; 79 nodes      ;
+; Simulation Coverage         ;      60.19 %  ;
+; Total Number of Transitions ; 5292          ;
+; Simulation Breakpoints      ; 0             ;
+; Family                      ; ACEX1K        ;
+; Device                      ; EP1K50QC208-3 ;
++-----------------------------+---------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      60.19 % ;
+; Total nodes checked                                 ; 79           ;
+; Total output ports checked                          ; 108          ;
+; Total output ports with complete 1/0-value coverage ; 65           ;
+; Total output ports with no 1/0-value coverage       ; 43           ;
+; Total output ports with no 1-value coverage         ; 43           ;
+; Total output ports with no 0-value coverage         ; 43           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                                                                                               ;
++------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                ; Output Port Name                                                                            ; Output Port Type ;
++------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------+------------------+
+; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[0]     ; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[0]        ; data_out0        ;
+; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[0]     ; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[0]~COUT   ; cout             ;
+; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[1]     ; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[1]        ; data_out0        ;
+; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[1]     ; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[1]~COUT   ; cout             ;
+; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[2]     ; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[2]        ; data_out0        ;
+; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[2]     ; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[2]~COUT   ; cout             ;
+; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[3]     ; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[3]        ; data_out0        ;
+; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[3]     ; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[3]~COUT   ; cout             ;
+; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[4]     ; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[4]        ; data_out0        ;
+; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[4]     ; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[4]~COUT   ; cout             ;
+; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[5]     ; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[5]        ; data_out0        ;
+; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[5]     ; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[5]~COUT   ; cout             ;
+; |FrequencyDivider|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[6]    ; |FrequencyDivider|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[6]       ; data_out0        ;
+; |FrequencyDivider|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[6]    ; |FrequencyDivider|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[6]~COUT  ; cout             ;
+; |FrequencyDivider|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[3]    ; |FrequencyDivider|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[3]       ; data_out0        ;
+; |FrequencyDivider|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[3]    ; |FrequencyDivider|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[3]~COUT  ; cout             ;
+; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[15]~2  ; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[15]~2     ; data_out0        ;
+; |FrequencyDivider|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[7]    ; |FrequencyDivider|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[7]       ; data_out0        ;
+; |FrequencyDivider|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[7]    ; |FrequencyDivider|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[7]~COUT  ; cout             ;
+; |FrequencyDivider|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[8]    ; |FrequencyDivider|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[8]       ; data_out0        ;
+; |FrequencyDivider|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[8]    ; |FrequencyDivider|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[8]~COUT  ; cout             ;
+; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[15]~3  ; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[15]~3     ; data_out0        ;
+; |FrequencyDivider|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[4]    ; |FrequencyDivider|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[4]       ; data_out0        ;
+; |FrequencyDivider|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[4]    ; |FrequencyDivider|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[4]~COUT  ; cout             ;
+; |FrequencyDivider|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[11]   ; |FrequencyDivider|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[11]      ; data_out0        ;
+; |FrequencyDivider|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[11]   ; |FrequencyDivider|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[11]~COUT ; cout             ;
+; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[15]~4  ; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[15]~4     ; data_out0        ;
+; |FrequencyDivider|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[2]    ; |FrequencyDivider|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[2]       ; data_out0        ;
+; |FrequencyDivider|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[2]    ; |FrequencyDivider|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[2]~COUT  ; cout             ;
+; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[15]~5  ; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[15]~5     ; data_out0        ;
+; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[15]~7  ; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[15]~7     ; data_out0        ;
+; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[15]~9  ; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[15]~9     ; data_out0        ;
+; |FrequencyDivider|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[14]   ; |FrequencyDivider|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[14]      ; data_out0        ;
+; |FrequencyDivider|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[14]   ; |FrequencyDivider|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[14]~COUT ; cout             ;
+; |FrequencyDivider|lpm_add_sub:Add0|addcore:adder|unreg_res_node[15]                      ; |FrequencyDivider|lpm_add_sub:Add0|addcore:adder|unreg_res_node[15]                         ; data_out0        ;
+; |FrequencyDivider|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[5]    ; |FrequencyDivider|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[5]       ; data_out0        ;
+; |FrequencyDivider|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[5]    ; |FrequencyDivider|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[5]~COUT  ; cout             ;
+; |FrequencyDivider|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[10]   ; |FrequencyDivider|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[10]      ; data_out0        ;
+; |FrequencyDivider|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[10]   ; |FrequencyDivider|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[10]~COUT ; cout             ;
+; |FrequencyDivider|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[1]    ; |FrequencyDivider|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[1]       ; data_out0        ;
+; |FrequencyDivider|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[1]    ; |FrequencyDivider|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[1]~COUT  ; cout             ;
+; |FrequencyDivider|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[13]   ; |FrequencyDivider|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[13]      ; data_out0        ;
+; |FrequencyDivider|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[13]   ; |FrequencyDivider|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[13]~COUT ; cout             ;
+; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[15]~16 ; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[15]~47    ; cascout          ;
+; |FrequencyDivider|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[12]   ; |FrequencyDivider|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[12]      ; data_out0        ;
+; |FrequencyDivider|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[12]   ; |FrequencyDivider|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[12]~COUT ; cout             ;
+; |FrequencyDivider|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]    ; |FrequencyDivider|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]       ; data_out0        ;
+; |FrequencyDivider|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]    ; |FrequencyDivider|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~COUT  ; cout             ;
+; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[15]~20 ; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[15]~20    ; data_out0        ;
+; |FrequencyDivider|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[9]    ; |FrequencyDivider|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[9]       ; data_out0        ;
+; |FrequencyDivider|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[9]    ; |FrequencyDivider|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[9]~COUT  ; cout             ;
+; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[15]~18 ; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[15]~50    ; cascout          ;
+; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[15]~21 ; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[15]~21    ; data_out0        ;
+; |FrequencyDivider|cout~2                                                                 ; |FrequencyDivider|cout~2                                                                    ; data_out0        ;
+; |FrequencyDivider|clk                                                                    ; |FrequencyDivider|clk~corein                                                                ; dataout          ;
+; |FrequencyDivider|data[6]                                                                ; |FrequencyDivider|data[6]~corein                                                            ; dataout          ;
+; |FrequencyDivider|data[1]                                                                ; |FrequencyDivider|data[1]~corein                                                            ; dataout          ;
+; |FrequencyDivider|data[0]                                                                ; |FrequencyDivider|data[0]~corein                                                            ; dataout          ;
+; |FrequencyDivider|q[0]                                                                   ; |FrequencyDivider|q[0]                                                                      ; padio            ;
+; |FrequencyDivider|q[1]                                                                   ; |FrequencyDivider|q[1]                                                                      ; padio            ;
+; |FrequencyDivider|q[2]                                                                   ; |FrequencyDivider|q[2]                                                                      ; padio            ;
+; |FrequencyDivider|q[3]                                                                   ; |FrequencyDivider|q[3]                                                                      ; padio            ;
+; |FrequencyDivider|q[4]                                                                   ; |FrequencyDivider|q[4]                                                                      ; padio            ;
+; |FrequencyDivider|q[5]                                                                   ; |FrequencyDivider|q[5]                                                                      ; padio            ;
+; |FrequencyDivider|cout                                                                   ; |FrequencyDivider|cout                                                                      ; padio            ;
++------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                                                                                              ;
++---------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                             ; Output Port Name                                                                           ; Output Port Type ;
++---------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+------------------+
+; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[6]  ; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[6]       ; data_out0        ;
+; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[6]  ; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[6]~COUT  ; cout             ;
+; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[7]  ; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[7]       ; data_out0        ;
+; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[7]  ; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[7]~COUT  ; cout             ;
+; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[8]  ; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[8]       ; data_out0        ;
+; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[8]  ; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[8]~COUT  ; cout             ;
+; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[9]  ; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[9]       ; data_out0        ;
+; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[9]  ; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[9]~COUT  ; cout             ;
+; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[10] ; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[10]      ; data_out0        ;
+; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[10] ; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[10]~COUT ; cout             ;
+; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[11] ; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[11]      ; data_out0        ;
+; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[11] ; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[11]~COUT ; cout             ;
+; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[12] ; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[12]      ; data_out0        ;
+; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[12] ; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[12]~COUT ; cout             ;
+; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[13] ; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[13]      ; data_out0        ;
+; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[13] ; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[13]~COUT ; cout             ;
+; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[14] ; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[14]      ; data_out0        ;
+; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[14] ; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[14]~COUT ; cout             ;
+; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[15] ; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[15]      ; data_out0        ;
+; |FrequencyDivider|en                                                                  ; |FrequencyDivider|en~corein                                                                ; dataout          ;
+; |FrequencyDivider|data[15]                                                            ; |FrequencyDivider|data[15]~corein                                                          ; dataout          ;
+; |FrequencyDivider|data[3]                                                             ; |FrequencyDivider|data[3]~corein                                                           ; dataout          ;
+; |FrequencyDivider|data[7]                                                             ; |FrequencyDivider|data[7]~corein                                                           ; dataout          ;
+; |FrequencyDivider|data[8]                                                             ; |FrequencyDivider|data[8]~corein                                                           ; dataout          ;
+; |FrequencyDivider|data[4]                                                             ; |FrequencyDivider|data[4]~corein                                                           ; dataout          ;
+; |FrequencyDivider|data[11]                                                            ; |FrequencyDivider|data[11]~corein                                                          ; dataout          ;
+; |FrequencyDivider|data[2]                                                             ; |FrequencyDivider|data[2]~corein                                                           ; dataout          ;
+; |FrequencyDivider|data[14]                                                            ; |FrequencyDivider|data[14]~corein                                                          ; dataout          ;
+; |FrequencyDivider|data[5]                                                             ; |FrequencyDivider|data[5]~corein                                                           ; dataout          ;
+; |FrequencyDivider|data[10]                                                            ; |FrequencyDivider|data[10]~corein                                                          ; dataout          ;
+; |FrequencyDivider|data[13]                                                            ; |FrequencyDivider|data[13]~corein                                                          ; dataout          ;
+; |FrequencyDivider|data[12]                                                            ; |FrequencyDivider|data[12]~corein                                                          ; dataout          ;
+; |FrequencyDivider|data[9]                                                             ; |FrequencyDivider|data[9]~corein                                                           ; dataout          ;
+; |FrequencyDivider|q[6]                                                                ; |FrequencyDivider|q[6]                                                                     ; padio            ;
+; |FrequencyDivider|q[7]                                                                ; |FrequencyDivider|q[7]                                                                     ; padio            ;
+; |FrequencyDivider|q[8]                                                                ; |FrequencyDivider|q[8]                                                                     ; padio            ;
+; |FrequencyDivider|q[9]                                                                ; |FrequencyDivider|q[9]                                                                     ; padio            ;
+; |FrequencyDivider|q[10]                                                               ; |FrequencyDivider|q[10]                                                                    ; padio            ;
+; |FrequencyDivider|q[11]                                                               ; |FrequencyDivider|q[11]                                                                    ; padio            ;
+; |FrequencyDivider|q[12]                                                               ; |FrequencyDivider|q[12]                                                                    ; padio            ;
+; |FrequencyDivider|q[13]                                                               ; |FrequencyDivider|q[13]                                                                    ; padio            ;
+; |FrequencyDivider|q[14]                                                               ; |FrequencyDivider|q[14]                                                                    ; padio            ;
+; |FrequencyDivider|q[15]                                                               ; |FrequencyDivider|q[15]                                                                    ; padio            ;
++---------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                                                                                              ;
++---------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                             ; Output Port Name                                                                           ; Output Port Type ;
++---------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+------------------+
+; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[6]  ; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[6]       ; data_out0        ;
+; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[6]  ; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[6]~COUT  ; cout             ;
+; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[7]  ; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[7]       ; data_out0        ;
+; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[7]  ; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[7]~COUT  ; cout             ;
+; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[8]  ; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[8]       ; data_out0        ;
+; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[8]  ; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[8]~COUT  ; cout             ;
+; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[9]  ; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[9]       ; data_out0        ;
+; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[9]  ; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[9]~COUT  ; cout             ;
+; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[10] ; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[10]      ; data_out0        ;
+; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[10] ; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[10]~COUT ; cout             ;
+; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[11] ; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[11]      ; data_out0        ;
+; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[11] ; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[11]~COUT ; cout             ;
+; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[12] ; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[12]      ; data_out0        ;
+; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[12] ; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[12]~COUT ; cout             ;
+; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[13] ; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[13]      ; data_out0        ;
+; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[13] ; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[13]~COUT ; cout             ;
+; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[14] ; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[14]      ; data_out0        ;
+; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[14] ; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[14]~COUT ; cout             ;
+; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[15] ; |FrequencyDivider|lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[15]      ; data_out0        ;
+; |FrequencyDivider|en                                                                  ; |FrequencyDivider|en~corein                                                                ; dataout          ;
+; |FrequencyDivider|data[15]                                                            ; |FrequencyDivider|data[15]~corein                                                          ; dataout          ;
+; |FrequencyDivider|data[3]                                                             ; |FrequencyDivider|data[3]~corein                                                           ; dataout          ;
+; |FrequencyDivider|data[7]                                                             ; |FrequencyDivider|data[7]~corein                                                           ; dataout          ;
+; |FrequencyDivider|data[8]                                                             ; |FrequencyDivider|data[8]~corein                                                           ; dataout          ;
+; |FrequencyDivider|data[4]                                                             ; |FrequencyDivider|data[4]~corein                                                           ; dataout          ;
+; |FrequencyDivider|data[11]                                                            ; |FrequencyDivider|data[11]~corein                                                          ; dataout          ;
+; |FrequencyDivider|data[2]                                                             ; |FrequencyDivider|data[2]~corein                                                           ; dataout          ;
+; |FrequencyDivider|data[14]                                                            ; |FrequencyDivider|data[14]~corein                                                          ; dataout          ;
+; |FrequencyDivider|data[5]                                                             ; |FrequencyDivider|data[5]~corein                                                           ; dataout          ;
+; |FrequencyDivider|data[10]                                                            ; |FrequencyDivider|data[10]~corein                                                          ; dataout          ;
+; |FrequencyDivider|data[13]                                                            ; |FrequencyDivider|data[13]~corein                                                          ; dataout          ;
+; |FrequencyDivider|data[12]                                                            ; |FrequencyDivider|data[12]~corein                                                          ; dataout          ;
+; |FrequencyDivider|data[9]                                                             ; |FrequencyDivider|data[9]~corein                                                           ; dataout          ;
+; |FrequencyDivider|q[6]                                                                ; |FrequencyDivider|q[6]                                                                     ; padio            ;
+; |FrequencyDivider|q[7]                                                                ; |FrequencyDivider|q[7]                                                                     ; padio            ;
+; |FrequencyDivider|q[8]                                                                ; |FrequencyDivider|q[8]                                                                     ; padio            ;
+; |FrequencyDivider|q[9]                                                                ; |FrequencyDivider|q[9]                                                                     ; padio            ;
+; |FrequencyDivider|q[10]                                                               ; |FrequencyDivider|q[10]                                                                    ; padio            ;
+; |FrequencyDivider|q[11]                                                               ; |FrequencyDivider|q[11]                                                                    ; padio            ;
+; |FrequencyDivider|q[12]                                                               ; |FrequencyDivider|q[12]                                                                    ; padio            ;
+; |FrequencyDivider|q[13]                                                               ; |FrequencyDivider|q[13]                                                                    ; padio            ;
+; |FrequencyDivider|q[14]                                                               ; |FrequencyDivider|q[14]                                                                    ; padio            ;
+; |FrequencyDivider|q[15]                                                               ; |FrequencyDivider|q[15]                                                                    ; padio            ;
++---------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+    Info: Processing started: Mon May 04 01:31:45 2015
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off FrequencyDivider -c FrequencyDivider
+Info: Using vector source file "C:/Users/²Ó±ó/Desktop/Work/FrequencyDivider/FrequencyDivider.vwf"
+Warning: Ignored node in vector source file. Can't find corresponding node name "clr" in design.
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      60.19 %
+Info: Number of transitions in simulation is 5292
+Info: Quartus II Simulator was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 153 megabytes
+    Info: Processing ended: Mon May 04 01:31:45 2015
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

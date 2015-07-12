@@ -1,0 +1,56 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 18.200 ns
+From           : data[0]
+To             : cout~reg0
+From Clock     : --
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 11.500 ns
+From           : lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[14]
+To             : q[14]
+From Clock     : clk
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : -0.600 ns
+From           : en
+To             : lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[15]
+From Clock     : --
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Clock Setup: 'clk'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 83.33 MHz ( period = 12.000 ns )
+From           : lpm_counter:q_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[13]
+To             : cout~reg0
+From Clock     : clk
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

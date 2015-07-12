@@ -1,0 +1,2022 @@
+// Copyright (C) 1991-2009 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus II"
+// VERSION "Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition"
+
+// DATE "05/04/2015 01:29:38"
+
+// 
+// Device: Altera EP1K50QC208-3 Package PQFP208
+// 
+
+// 
+// This Verilog file should be used for PrimeTime (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module FrequencyDivider (
+	data,
+	en,
+	clk,
+	q,
+	cout);
+input 	[15:0] data;
+input 	en;
+input 	clk;
+output 	[15:0] q;
+output 	cout;
+
+wire gnd = 1'b0;
+wire vcc = 1'b1;
+
+// synopsys translate_off
+initial $sdf_annotate("FrequencyDivider_v.sdo");
+// synopsys translate_on
+
+wire \Add0|adder|result_node|cs_buffer[6]~combout ;
+wire \Add0|adder|result_node|cs_buffer[3]~combout ;
+wire \q_rtl_0|wysi_counter|counter_cell[15]~2_combout ;
+wire \Add0|adder|result_node|cs_buffer[4]~combout ;
+wire \Add0|adder|result_node|cs_buffer[11]~combout ;
+wire \q_rtl_0|wysi_counter|counter_cell[15]~4_combout ;
+wire \q_rtl_0|wysi_counter|counter_cell[15]~16_combout ;
+wire \q_rtl_0|wysi_counter|counter_cell[15]~18_combout ;
+wire \en~dataout ;
+wire \clk~dataout ;
+wire \q_rtl_0|wysi_counter|counter_cell[0]~COUT ;
+wire \q_rtl_0|wysi_counter|counter_cell[1]~COUT ;
+wire \q_rtl_0|wysi_counter|counter_cell[2]~COUT ;
+wire \q_rtl_0|wysi_counter|counter_cell[3]~COUT ;
+wire \q_rtl_0|wysi_counter|counter_cell[4]~COUT ;
+wire \q_rtl_0|wysi_counter|counter_cell[5]~COUT ;
+wire \q_rtl_0|wysi_counter|counter_cell[6]~COUT ;
+wire \q_rtl_0|wysi_counter|counter_cell[7]~regout ;
+wire \data[7]~dataout ;
+wire \data[6]~dataout ;
+wire \data[5]~dataout ;
+wire \data[4]~dataout ;
+wire \data[3]~dataout ;
+wire \data[2]~dataout ;
+wire \data[1]~dataout ;
+wire \data[0]~dataout ;
+wire \Add0|adder|result_node|cs_buffer[0]~COUT ;
+wire \Add0|adder|result_node|cs_buffer[1]~COUT ;
+wire \Add0|adder|result_node|cs_buffer[2]~COUT ;
+wire \Add0|adder|result_node|cs_buffer[3]~COUT ;
+wire \Add0|adder|result_node|cs_buffer[4]~COUT ;
+wire \Add0|adder|result_node|cs_buffer[5]~COUT ;
+wire \Add0|adder|result_node|cs_buffer[6]~COUT ;
+wire \Add0|adder|result_node|cs_buffer[7]~combout ;
+wire \data[8]~dataout ;
+wire \Add0|adder|result_node|cs_buffer[7]~COUT ;
+wire \Add0|adder|result_node|cs_buffer[8]~combout ;
+wire \q_rtl_0|wysi_counter|counter_cell[15]~3_combout ;
+wire \q_rtl_0|wysi_counter|counter_cell[7]~COUT ;
+wire \q_rtl_0|wysi_counter|counter_cell[8]~COUT ;
+wire \q_rtl_0|wysi_counter|counter_cell[9]~COUT ;
+wire \q_rtl_0|wysi_counter|counter_cell[10]~COUT ;
+wire \q_rtl_0|wysi_counter|counter_cell[11]~COUT ;
+wire \q_rtl_0|wysi_counter|counter_cell[12]~COUT ;
+wire \q_rtl_0|wysi_counter|counter_cell[13]~COUT ;
+wire \q_rtl_0|wysi_counter|counter_cell[14]~COUT ;
+wire \q_rtl_0|wysi_counter|counter_cell[15]~regout ;
+wire \data[15]~dataout ;
+wire \data[14]~dataout ;
+wire \data[13]~dataout ;
+wire \data[12]~dataout ;
+wire \data[11]~dataout ;
+wire \data[10]~dataout ;
+wire \data[9]~dataout ;
+wire \Add0|adder|result_node|cs_buffer[8]~COUT ;
+wire \Add0|adder|result_node|cs_buffer[9]~COUT ;
+wire \Add0|adder|result_node|cs_buffer[10]~COUT ;
+wire \Add0|adder|result_node|cs_buffer[11]~COUT ;
+wire \Add0|adder|result_node|cs_buffer[12]~COUT ;
+wire \Add0|adder|result_node|cs_buffer[13]~COUT ;
+wire \Add0|adder|result_node|cs_buffer[14]~COUT ;
+wire \Add0|adder|unreg_res_node[15]~combout ;
+wire \Add0|adder|result_node|cs_buffer[2]~combout ;
+wire \q_rtl_0|wysi_counter|counter_cell[15]~5_combout ;
+wire \Add0|adder|result_node|cs_buffer[12]~combout ;
+wire \Add0|adder|result_node|cs_buffer[0]~combout ;
+wire \Add0|adder|result_node|cs_buffer[13]~combout ;
+wire \q_rtl_0|wysi_counter|counter_cell[5]~regout ;
+wire \Add0|adder|result_node|cs_buffer[5]~combout ;
+wire \q_rtl_0|wysi_counter|counter_cell[15]~47 ;
+wire \q_rtl_0|wysi_counter|counter_cell[15]~20_combout ;
+wire \q_rtl_0|wysi_counter|counter_cell[15]~7_combout ;
+wire \Add0|adder|result_node|cs_buffer[1]~combout ;
+wire \q_rtl_0|wysi_counter|counter_cell[14]~regout ;
+wire \Add0|adder|result_node|cs_buffer[14]~combout ;
+wire \Add0|adder|result_node|cs_buffer[10]~combout ;
+wire \q_rtl_0|wysi_counter|counter_cell[9]~regout ;
+wire \Add0|adder|result_node|cs_buffer[9]~combout ;
+wire \q_rtl_0|wysi_counter|counter_cell[15]~50 ;
+wire \q_rtl_0|wysi_counter|counter_cell[15]~21_combout ;
+wire \q_rtl_0|wysi_counter|counter_cell[15]~9_combout ;
+wire \q_rtl_0|wysi_counter|counter_cell[0]~regout ;
+wire \q_rtl_0|wysi_counter|counter_cell[1]~regout ;
+wire \q_rtl_0|wysi_counter|counter_cell[2]~regout ;
+wire \q_rtl_0|wysi_counter|counter_cell[3]~regout ;
+wire \q_rtl_0|wysi_counter|counter_cell[4]~regout ;
+wire \q_rtl_0|wysi_counter|counter_cell[6]~regout ;
+wire \q_rtl_0|wysi_counter|counter_cell[8]~regout ;
+wire \q_rtl_0|wysi_counter|counter_cell[10]~regout ;
+wire \q_rtl_0|wysi_counter|counter_cell[11]~regout ;
+wire \q_rtl_0|wysi_counter|counter_cell[12]~regout ;
+wire \q_rtl_0|wysi_counter|counter_cell[13]~regout ;
+wire \cout~2_combout ;
+wire \cout~reg0_regout ;
+
+
+// atom is at LC7_F9
+flex10ke_lcell \Add0|adder|result_node|cs_buffer[6] (
+// Equation(s):
+// \Add0|adder|result_node|cs_buffer[6]~combout  = \data[6]~dataout  $ \Add0|adder|result_node|cs_buffer[5]~COUT 
+// \Add0|adder|result_node|cs_buffer[6]~COUT  = CARRY(\data[6]~dataout  # \Add0|adder|result_node|cs_buffer[5]~COUT )
+
+	.dataa(vcc),
+	.datab(\data[6]~dataout ),
+	.datac(vcc),
+	.datad(vcc),
+	.aclr(gnd),
+	.aload(gnd),
+	.clk(gnd),
+	.cin(\Add0|adder|result_node|cs_buffer[5]~COUT ),
+	.cascin(vcc),
+	.modesel(7'b1000010),
+	.combout(\Add0|adder|result_node|cs_buffer[6]~combout ),
+	.regout(),
+	.cout(\Add0|adder|result_node|cs_buffer[6]~COUT ),
+	.cascout(),
+	.pathsel(10'b0110010010));
+// synopsys translate_off
+// defparam \Add0|adder|result_node|cs_buffer[6] .cin_used = "true";
+// defparam \Add0|adder|result_node|cs_buffer[6] .clock_enable_mode = "false";
+// defparam \Add0|adder|result_node|cs_buffer[6] .lut_mask = "3cfc";
+// defparam \Add0|adder|result_node|cs_buffer[6] .operation_mode = "arithmetic";
+// defparam \Add0|adder|result_node|cs_buffer[6] .output_mode = "comb_only";
+// defparam \Add0|adder|result_node|cs_buffer[6] .packed_mode = "false";
+// synopsys translate_on
+
+// atom is at LC4_F9
+flex10ke_lcell \Add0|adder|result_node|cs_buffer[3] (
+// Equation(s):
+// \Add0|adder|result_node|cs_buffer[3]~combout  = \data[3]~dataout  $ \Add0|adder|result_node|cs_buffer[2]~COUT 
+// \Add0|adder|result_node|cs_buffer[3]~COUT  = CARRY(\data[3]~dataout  # \Add0|adder|result_node|cs_buffer[2]~COUT )
+
+	.dataa(vcc),
+	.datab(\data[3]~dataout ),
+	.datac(vcc),
+	.datad(vcc),
+	.aclr(gnd),
+	.aload(gnd),
+	.clk(gnd),
+	.cin(\Add0|adder|result_node|cs_buffer[2]~COUT ),
+	.cascin(vcc),
+	.modesel(7'b1000010),
+	.combout(\Add0|adder|result_node|cs_buffer[3]~combout ),
+	.regout(),
+	.cout(\Add0|adder|result_node|cs_buffer[3]~COUT ),
+	.cascout(),
+	.pathsel(10'b0110010010));
+// synopsys translate_off
+// defparam \Add0|adder|result_node|cs_buffer[3] .cin_used = "true";
+// defparam \Add0|adder|result_node|cs_buffer[3] .clock_enable_mode = "false";
+// defparam \Add0|adder|result_node|cs_buffer[3] .lut_mask = "3cfc";
+// defparam \Add0|adder|result_node|cs_buffer[3] .operation_mode = "arithmetic";
+// defparam \Add0|adder|result_node|cs_buffer[3] .output_mode = "comb_only";
+// defparam \Add0|adder|result_node|cs_buffer[3] .packed_mode = "false";
+// synopsys translate_on
+
+// atom is at LC2_F1
+flex10ke_lcell \q_rtl_0|wysi_counter|counter_cell[15]~2 (
+// Equation(s):
+// \q_rtl_0|wysi_counter|counter_cell[15]~2_combout  = \q_rtl_0|wysi_counter|counter_cell[3]~regout  & (\Add0|adder|result_node|cs_buffer[3]~combout  # \q_rtl_0|wysi_counter|counter_cell[6]~regout  $ !\Add0|adder|result_node|cs_buffer[6]~combout ) # 
+// !\q_rtl_0|wysi_counter|counter_cell[3]~regout  & (\q_rtl_0|wysi_counter|counter_cell[6]~regout  $ !\Add0|adder|result_node|cs_buffer[6]~combout  # !\Add0|adder|result_node|cs_buffer[3]~combout )
+
+	.dataa(\q_rtl_0|wysi_counter|counter_cell[3]~regout ),
+	.datab(\q_rtl_0|wysi_counter|counter_cell[6]~regout ),
+	.datac(\Add0|adder|result_node|cs_buffer[6]~combout ),
+	.datad(\Add0|adder|result_node|cs_buffer[3]~combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.clk(gnd),
+	.cin(gnd),
+	.cascin(vcc),
+	.modesel(7'b1000001),
+	.combout(\q_rtl_0|wysi_counter|counter_cell[15]~2_combout ),
+	.regout(),
+	.cout(),
+	.cascout(),
+	.pathsel(10'b0000001111));
+// synopsys translate_off
+// defparam \q_rtl_0|wysi_counter|counter_cell[15]~2 .clock_enable_mode = "false";
+// defparam \q_rtl_0|wysi_counter|counter_cell[15]~2 .lut_mask = "ebd7";
+// defparam \q_rtl_0|wysi_counter|counter_cell[15]~2 .operation_mode = "normal";
+// defparam \q_rtl_0|wysi_counter|counter_cell[15]~2 .output_mode = "comb_only";
+// defparam \q_rtl_0|wysi_counter|counter_cell[15]~2 .packed_mode = "false";
+// synopsys translate_on
+
+// atom is at LC5_F9
+flex10ke_lcell \Add0|adder|result_node|cs_buffer[4] (
+// Equation(s):
+// \Add0|adder|result_node|cs_buffer[4]~combout  = \data[4]~dataout  $ \Add0|adder|result_node|cs_buffer[3]~COUT 
+// \Add0|adder|result_node|cs_buffer[4]~COUT  = CARRY(\data[4]~dataout  # \Add0|adder|result_node|cs_buffer[3]~COUT )
+
+	.dataa(vcc),
+	.datab(\data[4]~dataout ),
+	.datac(vcc),
+	.datad(vcc),
+	.aclr(gnd),
+	.aload(gnd),
+	.clk(gnd),
+	.cin(\Add0|adder|result_node|cs_buffer[3]~COUT ),
+	.cascin(vcc),
+	.modesel(7'b1000010),
+	.combout(\Add0|adder|result_node|cs_buffer[4]~combout ),
+	.regout(),
+	.cout(\Add0|adder|result_node|cs_buffer[4]~COUT ),
+	.cascout(),
+	.pathsel(10'b0110010010));
+// synopsys translate_off
+// defparam \Add0|adder|result_node|cs_buffer[4] .cin_used = "true";
+// defparam \Add0|adder|result_node|cs_buffer[4] .clock_enable_mode = "false";
+// defparam \Add0|adder|result_node|cs_buffer[4] .lut_mask = "3cfc";
+// defparam \Add0|adder|result_node|cs_buffer[4] .operation_mode = "arithmetic";
+// defparam \Add0|adder|result_node|cs_buffer[4] .output_mode = "comb_only";
+// defparam \Add0|adder|result_node|cs_buffer[4] .packed_mode = "false";
+// synopsys translate_on
+
+// atom is at LC4_F11
+flex10ke_lcell \Add0|adder|result_node|cs_buffer[11] (
+// Equation(s):
+// \Add0|adder|result_node|cs_buffer[11]~combout  = \data[11]~dataout  $ \Add0|adder|result_node|cs_buffer[10]~COUT 
+// \Add0|adder|result_node|cs_buffer[11]~COUT  = CARRY(\data[11]~dataout  # \Add0|adder|result_node|cs_buffer[10]~COUT )
+
+	.dataa(vcc),
+	.datab(\data[11]~dataout ),
+	.datac(vcc),
+	.datad(vcc),
+	.aclr(gnd),
+	.aload(gnd),
+	.clk(gnd),
+	.cin(\Add0|adder|result_node|cs_buffer[10]~COUT ),
+	.cascin(vcc),
+	.modesel(7'b1000010),
+	.combout(\Add0|adder|result_node|cs_buffer[11]~combout ),
+	.regout(),
+	.cout(\Add0|adder|result_node|cs_buffer[11]~COUT ),
+	.cascout(),
+	.pathsel(10'b0110010010));
+// synopsys translate_off
+// defparam \Add0|adder|result_node|cs_buffer[11] .cin_used = "true";
+// defparam \Add0|adder|result_node|cs_buffer[11] .clock_enable_mode = "false";
+// defparam \Add0|adder|result_node|cs_buffer[11] .lut_mask = "3cfc";
+// defparam \Add0|adder|result_node|cs_buffer[11] .operation_mode = "arithmetic";
+// defparam \Add0|adder|result_node|cs_buffer[11] .output_mode = "comb_only";
+// defparam \Add0|adder|result_node|cs_buffer[11] .packed_mode = "false";
+// synopsys translate_on
+
+// atom is at LC1_F2
+flex10ke_lcell \q_rtl_0|wysi_counter|counter_cell[15]~4 (
+// Equation(s):
+// \q_rtl_0|wysi_counter|counter_cell[15]~4_combout  = \q_rtl_0|wysi_counter|counter_cell[11]~regout  & (\Add0|adder|result_node|cs_buffer[11]~combout  # \q_rtl_0|wysi_counter|counter_cell[4]~regout  $ !\Add0|adder|result_node|cs_buffer[4]~combout ) # 
+// !\q_rtl_0|wysi_counter|counter_cell[11]~regout  & (\q_rtl_0|wysi_counter|counter_cell[4]~regout  $ !\Add0|adder|result_node|cs_buffer[4]~combout  # !\Add0|adder|result_node|cs_buffer[11]~combout )
+
+	.dataa(\q_rtl_0|wysi_counter|counter_cell[11]~regout ),
+	.datab(\q_rtl_0|wysi_counter|counter_cell[4]~regout ),
+	.datac(\Add0|adder|result_node|cs_buffer[4]~combout ),
+	.datad(\Add0|adder|result_node|cs_buffer[11]~combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.clk(gnd),
+	.cin(gnd),
+	.cascin(vcc),
+	.modesel(7'b1000001),
+	.combout(\q_rtl_0|wysi_counter|counter_cell[15]~4_combout ),
+	.regout(),
+	.cout(),
+	.cascout(),
+	.pathsel(10'b0000001111));
+// synopsys translate_off
+// defparam \q_rtl_0|wysi_counter|counter_cell[15]~4 .clock_enable_mode = "false";
+// defparam \q_rtl_0|wysi_counter|counter_cell[15]~4 .lut_mask = "ebd7";
+// defparam \q_rtl_0|wysi_counter|counter_cell[15]~4 .operation_mode = "normal";
+// defparam \q_rtl_0|wysi_counter|counter_cell[15]~4 .output_mode = "comb_only";
+// defparam \q_rtl_0|wysi_counter|counter_cell[15]~4 .packed_mode = "false";
+// synopsys translate_on
+
+// atom is at PIN_184
+flex10ke_io \en~I (
+	.datain(gnd),
+	.clk(gnd),
+	.ena(vcc),
+	.aclr(gnd),
+	.oe(gnd),
+	.modesel(11'b01010000001),
+	.dataout(\en~dataout ),
+	.padio(en));
+// synopsys translate_off
+// defparam \en~I .feedback_mode = "from_pin";
+// defparam \en~I .operation_mode = "input";
+// defparam \en~I .reg_source_mode = "none";
+// synopsys translate_on
+
+// atom is at PIN_79
+flex10ke_io \clk~I (
+	.datain(gnd),
+	.clk(gnd),
+	.ena(vcc),
+	.aclr(gnd),
+	.oe(gnd),
+	.modesel(11'b01010000001),
+	.dataout(\clk~dataout ),
+	.padio(clk));
+// synopsys translate_off
+// defparam \clk~I .feedback_mode = "from_pin";
+// defparam \clk~I .operation_mode = "input";
+// defparam \clk~I .reg_source_mode = "none";
+// synopsys translate_on
+
+// atom is at LC1_F3
+flex10ke_lcell \q_rtl_0|wysi_counter|counter_cell[0] (
+// Equation(s):
+// \q_rtl_0|wysi_counter|counter_cell[0]~regout  = DFFEA((\en~dataout  $ \q_rtl_0|wysi_counter|counter_cell[0]~regout ) & \q_rtl_0|wysi_counter|counter_cell[15]~9_combout , GLOBAL(\clk~dataout ), , , \en~dataout , , )
+// \q_rtl_0|wysi_counter|counter_cell[0]~COUT  = CARRY(\q_rtl_0|wysi_counter|counter_cell[0]~regout )
+
+	.dataa(\en~dataout ),
+	.datab(\q_rtl_0|wysi_counter|counter_cell[15]~9_combout ),
+	.datac(vcc),
+	.datad(vcc),
+	.aclr(gnd),
+	.aload(gnd),
+	.clk(\clk~dataout ),
+	.cin(gnd),
+	.cascin(vcc),
+	.modesel(7'b0101000),
+	.combout(),
+	.regout(\q_rtl_0|wysi_counter|counter_cell[0]~regout ),
+	.cout(\q_rtl_0|wysi_counter|counter_cell[0]~COUT ),
+	.cascout(),
+	.pathsel(10'b1000100001));
+// synopsys translate_off
+// defparam \q_rtl_0|wysi_counter|counter_cell[0] .clock_enable_mode = "true";
+// defparam \q_rtl_0|wysi_counter|counter_cell[0] .lut_mask = "66aa";
+// defparam \q_rtl_0|wysi_counter|counter_cell[0] .operation_mode = "clrb_cntr";
+// defparam \q_rtl_0|wysi_counter|counter_cell[0] .output_mode = "reg_only";
+// defparam \q_rtl_0|wysi_counter|counter_cell[0] .packed_mode = "false";
+// synopsys translate_on
+
+// atom is at LC2_F3
+flex10ke_lcell \q_rtl_0|wysi_counter|counter_cell[1] (
+// Equation(s):
+// \q_rtl_0|wysi_counter|counter_cell[1]~regout  = DFFEA((\q_rtl_0|wysi_counter|counter_cell[1]~regout  $ (\en~dataout  & \q_rtl_0|wysi_counter|counter_cell[0]~COUT )) & \q_rtl_0|wysi_counter|counter_cell[15]~9_combout , GLOBAL(\clk~dataout ), , , 
+// \en~dataout , , )
+// \q_rtl_0|wysi_counter|counter_cell[1]~COUT  = CARRY(\q_rtl_0|wysi_counter|counter_cell[1]~regout  & (\q_rtl_0|wysi_counter|counter_cell[0]~COUT ))
+
+	.dataa(\en~dataout ),
+	.datab(\q_rtl_0|wysi_counter|counter_cell[15]~9_combout ),
+	.datac(vcc),
+	.datad(vcc),
+	.aclr(gnd),
+	.aload(gnd),
+	.clk(\clk~dataout ),
+	.cin(\q_rtl_0|wysi_counter|counter_cell[0]~COUT ),
+	.cascin(vcc),
+	.modesel(7'b0101000),
+	.combout(),
+	.regout(\q_rtl_0|wysi_counter|counter_cell[1]~regout ),
+	.cout(\q_rtl_0|wysi_counter|counter_cell[1]~COUT ),
+	.cascout(),
+	.pathsel(10'b1000100001));
+// synopsys translate_off
+// defparam \q_rtl_0|wysi_counter|counter_cell[1] .cin_used = "true";
+// defparam \q_rtl_0|wysi_counter|counter_cell[1] .clock_enable_mode = "true";
+// defparam \q_rtl_0|wysi_counter|counter_cell[1] .lut_mask = "6ca0";
+// defparam \q_rtl_0|wysi_counter|counter_cell[1] .operation_mode = "clrb_cntr";
+// defparam \q_rtl_0|wysi_counter|counter_cell[1] .output_mode = "reg_only";
+// defparam \q_rtl_0|wysi_counter|counter_cell[1] .packed_mode = "false";
+// synopsys translate_on
+
+// atom is at LC3_F3
+flex10ke_lcell \q_rtl_0|wysi_counter|counter_cell[2] (
+// Equation(s):
+// \q_rtl_0|wysi_counter|counter_cell[2]~regout  = DFFEA((\q_rtl_0|wysi_counter|counter_cell[2]~regout  $ (\en~dataout  & \q_rtl_0|wysi_counter|counter_cell[1]~COUT )) & \q_rtl_0|wysi_counter|counter_cell[15]~9_combout , GLOBAL(\clk~dataout ), , , 
+// \en~dataout , , )
+// \q_rtl_0|wysi_counter|counter_cell[2]~COUT  = CARRY(\q_rtl_0|wysi_counter|counter_cell[2]~regout  & (\q_rtl_0|wysi_counter|counter_cell[1]~COUT ))
+
+	.dataa(\en~dataout ),
+	.datab(\q_rtl_0|wysi_counter|counter_cell[15]~9_combout ),
+	.datac(vcc),
+	.datad(vcc),
+	.aclr(gnd),
+	.aload(gnd),
+	.clk(\clk~dataout ),
+	.cin(\q_rtl_0|wysi_counter|counter_cell[1]~COUT ),
+	.cascin(vcc),
+	.modesel(7'b0101000),
+	.combout(),
+	.regout(\q_rtl_0|wysi_counter|counter_cell[2]~regout ),
+	.cout(\q_rtl_0|wysi_counter|counter_cell[2]~COUT ),
+	.cascout(),
+	.pathsel(10'b1000100001));
+// synopsys translate_off
+// defparam \q_rtl_0|wysi_counter|counter_cell[2] .cin_used = "true";
+// defparam \q_rtl_0|wysi_counter|counter_cell[2] .clock_enable_mode = "true";
+// defparam \q_rtl_0|wysi_counter|counter_cell[2] .lut_mask = "6ca0";
+// defparam \q_rtl_0|wysi_counter|counter_cell[2] .operation_mode = "clrb_cntr";
+// defparam \q_rtl_0|wysi_counter|counter_cell[2] .output_mode = "reg_only";
+// defparam \q_rtl_0|wysi_counter|counter_cell[2] .packed_mode = "false";
+// synopsys translate_on
+
+// atom is at LC4_F3
+flex10ke_lcell \q_rtl_0|wysi_counter|counter_cell[3] (
+// Equation(s):
+// \q_rtl_0|wysi_counter|counter_cell[3]~regout  = DFFEA((\q_rtl_0|wysi_counter|counter_cell[3]~regout  $ (\en~dataout  & \q_rtl_0|wysi_counter|counter_cell[2]~COUT )) & \q_rtl_0|wysi_counter|counter_cell[15]~9_combout , GLOBAL(\clk~dataout ), , , 
+// \en~dataout , , )
+// \q_rtl_0|wysi_counter|counter_cell[3]~COUT  = CARRY(\q_rtl_0|wysi_counter|counter_cell[3]~regout  & (\q_rtl_0|wysi_counter|counter_cell[2]~COUT ))
+
+	.dataa(\en~dataout ),
+	.datab(\q_rtl_0|wysi_counter|counter_cell[15]~9_combout ),
+	.datac(vcc),
+	.datad(vcc),
+	.aclr(gnd),
+	.aload(gnd),
+	.clk(\clk~dataout ),
+	.cin(\q_rtl_0|wysi_counter|counter_cell[2]~COUT ),
+	.cascin(vcc),
+	.modesel(7'b0101000),
+	.combout(),
+	.regout(\q_rtl_0|wysi_counter|counter_cell[3]~regout ),
+	.cout(\q_rtl_0|wysi_counter|counter_cell[3]~COUT ),
+	.cascout(),
+	.pathsel(10'b1000100001));
+// synopsys translate_off
+// defparam \q_rtl_0|wysi_counter|counter_cell[3] .cin_used = "true";
+// defparam \q_rtl_0|wysi_counter|counter_cell[3] .clock_enable_mode = "true";
+// defparam \q_rtl_0|wysi_counter|counter_cell[3] .lut_mask = "6ca0";
+// defparam \q_rtl_0|wysi_counter|counter_cell[3] .operation_mode = "clrb_cntr";
+// defparam \q_rtl_0|wysi_counter|counter_cell[3] .output_mode = "reg_only";
+// defparam \q_rtl_0|wysi_counter|counter_cell[3] .packed_mode = "false";
+// synopsys translate_on
+
+// atom is at LC5_F3
+flex10ke_lcell \q_rtl_0|wysi_counter|counter_cell[4] (
+// Equation(s):
+// \q_rtl_0|wysi_counter|counter_cell[4]~regout  = DFFEA((\q_rtl_0|wysi_counter|counter_cell[4]~regout  $ (\en~dataout  & \q_rtl_0|wysi_counter|counter_cell[3]~COUT )) & \q_rtl_0|wysi_counter|counter_cell[15]~9_combout , GLOBAL(\clk~dataout ), , , 
+// \en~dataout , , )
+// \q_rtl_0|wysi_counter|counter_cell[4]~COUT  = CARRY(\q_rtl_0|wysi_counter|counter_cell[4]~regout  & (\q_rtl_0|wysi_counter|counter_cell[3]~COUT ))
+
+	.dataa(\en~dataout ),
+	.datab(\q_rtl_0|wysi_counter|counter_cell[15]~9_combout ),
+	.datac(vcc),
+	.datad(vcc),
+	.aclr(gnd),
+	.aload(gnd),
+	.clk(\clk~dataout ),
+	.cin(\q_rtl_0|wysi_counter|counter_cell[3]~COUT ),
+	.cascin(vcc),
+	.modesel(7'b0101000),
+	.combout(),
+	.regout(\q_rtl_0|wysi_counter|counter_cell[4]~regout ),
+	.cout(\q_rtl_0|wysi_counter|counter_cell[4]~COUT ),
+	.cascout(),
+	.pathsel(10'b1000100001));
+// synopsys translate_off
+// defparam \q_rtl_0|wysi_counter|counter_cell[4] .cin_used = "true";
+// defparam \q_rtl_0|wysi_counter|counter_cell[4] .clock_enable_mode = "true";
+// defparam \q_rtl_0|wysi_counter|counter_cell[4] .lut_mask = "6ca0";
+// defparam \q_rtl_0|wysi_counter|counter_cell[4] .operation_mode = "clrb_cntr";
+// defparam \q_rtl_0|wysi_counter|counter_cell[4] .output_mode = "reg_only";
+// defparam \q_rtl_0|wysi_counter|counter_cell[4] .packed_mode = "false";
+// synopsys translate_on
+
+// atom is at LC6_F3
+flex10ke_lcell \q_rtl_0|wysi_counter|counter_cell[5] (
+// Equation(s):
+// \q_rtl_0|wysi_counter|counter_cell[5]~regout  = DFFEA((\q_rtl_0|wysi_counter|counter_cell[5]~regout  $ (\en~dataout  & \q_rtl_0|wysi_counter|counter_cell[4]~COUT )) & \q_rtl_0|wysi_counter|counter_cell[15]~9_combout , GLOBAL(\clk~dataout ), , , 
+// \en~dataout , , )
+// \q_rtl_0|wysi_counter|counter_cell[5]~COUT  = CARRY(\q_rtl_0|wysi_counter|counter_cell[5]~regout  & (\q_rtl_0|wysi_counter|counter_cell[4]~COUT ))
+
+	.dataa(\en~dataout ),
+	.datab(\q_rtl_0|wysi_counter|counter_cell[15]~9_combout ),
+	.datac(vcc),
+	.datad(vcc),
+	.aclr(gnd),
+	.aload(gnd),
+	.clk(\clk~dataout ),
+	.cin(\q_rtl_0|wysi_counter|counter_cell[4]~COUT ),
+	.cascin(vcc),
+	.modesel(7'b0101000),
+	.combout(),
+	.regout(\q_rtl_0|wysi_counter|counter_cell[5]~regout ),
+	.cout(\q_rtl_0|wysi_counter|counter_cell[5]~COUT ),
+	.cascout(),
+	.pathsel(10'b1000100001));
+// synopsys translate_off
+// defparam \q_rtl_0|wysi_counter|counter_cell[5] .cin_used = "true";
+// defparam \q_rtl_0|wysi_counter|counter_cell[5] .clock_enable_mode = "true";
+// defparam \q_rtl_0|wysi_counter|counter_cell[5] .lut_mask = "6ca0";
+// defparam \q_rtl_0|wysi_counter|counter_cell[5] .operation_mode = "clrb_cntr";
+// defparam \q_rtl_0|wysi_counter|counter_cell[5] .output_mode = "reg_only";
+// defparam \q_rtl_0|wysi_counter|counter_cell[5] .packed_mode = "false";
+// synopsys translate_on
+
+// atom is at LC7_F3
+flex10ke_lcell \q_rtl_0|wysi_counter|counter_cell[6] (
+// Equation(s):
+// \q_rtl_0|wysi_counter|counter_cell[6]~regout  = DFFEA((\q_rtl_0|wysi_counter|counter_cell[6]~regout  $ (\en~dataout  & \q_rtl_0|wysi_counter|counter_cell[5]~COUT )) & \q_rtl_0|wysi_counter|counter_cell[15]~9_combout , GLOBAL(\clk~dataout ), , , 
+// \en~dataout , , )
+// \q_rtl_0|wysi_counter|counter_cell[6]~COUT  = CARRY(\q_rtl_0|wysi_counter|counter_cell[6]~regout  & (\q_rtl_0|wysi_counter|counter_cell[5]~COUT ))
+
+	.dataa(\en~dataout ),
+	.datab(\q_rtl_0|wysi_counter|counter_cell[15]~9_combout ),
+	.datac(vcc),
+	.datad(vcc),
+	.aclr(gnd),
+	.aload(gnd),
+	.clk(\clk~dataout ),
+	.cin(\q_rtl_0|wysi_counter|counter_cell[5]~COUT ),
+	.cascin(vcc),
+	.modesel(7'b0101000),
+	.combout(),
+	.regout(\q_rtl_0|wysi_counter|counter_cell[6]~regout ),
+	.cout(\q_rtl_0|wysi_counter|counter_cell[6]~COUT ),
+	.cascout(),
+	.pathsel(10'b1000100001));
+// synopsys translate_off
+// defparam \q_rtl_0|wysi_counter|counter_cell[6] .cin_used = "true";
+// defparam \q_rtl_0|wysi_counter|counter_cell[6] .clock_enable_mode = "true";
+// defparam \q_rtl_0|wysi_counter|counter_cell[6] .lut_mask = "6ca0";
+// defparam \q_rtl_0|wysi_counter|counter_cell[6] .operation_mode = "clrb_cntr";
+// defparam \q_rtl_0|wysi_counter|counter_cell[6] .output_mode = "reg_only";
+// defparam \q_rtl_0|wysi_counter|counter_cell[6] .packed_mode = "false";
+// synopsys translate_on
+
+// atom is at LC8_F3
+flex10ke_lcell \q_rtl_0|wysi_counter|counter_cell[7] (
+// Equation(s):
+// \q_rtl_0|wysi_counter|counter_cell[7]~regout  = DFFEA((\q_rtl_0|wysi_counter|counter_cell[7]~regout  $ (\en~dataout  & \q_rtl_0|wysi_counter|counter_cell[6]~COUT )) & \q_rtl_0|wysi_counter|counter_cell[15]~9_combout , GLOBAL(\clk~dataout ), , , 
+// \en~dataout , , )
+// \q_rtl_0|wysi_counter|counter_cell[7]~COUT  = CARRY(\q_rtl_0|wysi_counter|counter_cell[7]~regout  & (\q_rtl_0|wysi_counter|counter_cell[6]~COUT ))
+
+	.dataa(\en~dataout ),
+	.datab(\q_rtl_0|wysi_counter|counter_cell[15]~9_combout ),
+	.datac(vcc),
+	.datad(vcc),
+	.aclr(gnd),
+	.aload(gnd),
+	.clk(\clk~dataout ),
+	.cin(\q_rtl_0|wysi_counter|counter_cell[6]~COUT ),
+	.cascin(vcc),
+	.modesel(7'b0101000),
+	.combout(),
+	.regout(\q_rtl_0|wysi_counter|counter_cell[7]~regout ),
+	.cout(\q_rtl_0|wysi_counter|counter_cell[7]~COUT ),
+	.cascout(),
+	.pathsel(10'b1000100001));
+// synopsys translate_off
+// defparam \q_rtl_0|wysi_counter|counter_cell[7] .cin_used = "true";
+// defparam \q_rtl_0|wysi_counter|counter_cell[7] .clock_enable_mode = "true";
+// defparam \q_rtl_0|wysi_counter|counter_cell[7] .lut_mask = "6ca0";
+// defparam \q_rtl_0|wysi_counter|counter_cell[7] .operation_mode = "clrb_cntr";
+// defparam \q_rtl_0|wysi_counter|counter_cell[7] .output_mode = "reg_only";
+// defparam \q_rtl_0|wysi_counter|counter_cell[7] .packed_mode = "false";
+// synopsys translate_on
+
+// atom is at PIN_183
+flex10ke_io \data[7]~I (
+	.datain(gnd),
+	.clk(gnd),
+	.ena(vcc),
+	.aclr(gnd),
+	.oe(gnd),
+	.modesel(11'b01010000001),
+	.dataout(\data[7]~dataout ),
+	.padio(data[7]));
+// synopsys translate_off
+// defparam \data[7]~I .feedback_mode = "from_pin";
+// defparam \data[7]~I .operation_mode = "input";
+// defparam \data[7]~I .reg_source_mode = "none";
+// synopsys translate_on
+
+// atom is at PIN_78
+flex10ke_io \data[6]~I (
+	.datain(gnd),
+	.clk(gnd),
+	.ena(vcc),
+	.aclr(gnd),
+	.oe(gnd),
+	.modesel(11'b01010000001),
+	.dataout(\data[6]~dataout ),
+	.padio(data[6]));
+// synopsys translate_off
+// defparam \data[6]~I .feedback_mode = "from_pin";
+// defparam \data[6]~I .operation_mode = "input";
+// defparam \data[6]~I .reg_source_mode = "none";
+// synopsys translate_on
+
+// atom is at PIN_172
+flex10ke_io \data[5]~I (
+	.datain(gnd),
+	.clk(gnd),
+	.ena(vcc),
+	.aclr(gnd),
+	.oe(gnd),
+	.modesel(11'b01010000001),
+	.dataout(\data[5]~dataout ),
+	.padio(data[5]));
+// synopsys translate_off
+// defparam \data[5]~I .feedback_mode = "from_pin";
+// defparam \data[5]~I .operation_mode = "input";
+// defparam \data[5]~I .reg_source_mode = "none";
+// synopsys translate_on
+
+// atom is at PIN_174
+flex10ke_io \data[4]~I (
+	.datain(gnd),
+	.clk(gnd),
+	.ena(vcc),
+	.aclr(gnd),
+	.oe(gnd),
+	.modesel(11'b01010000001),
+	.dataout(\data[4]~dataout ),
+	.padio(data[4]));
+// synopsys translate_off
+// defparam \data[4]~I .feedback_mode = "from_pin";
+// defparam \data[4]~I .operation_mode = "input";
+// defparam \data[4]~I .reg_source_mode = "none";
+// synopsys translate_on
+
+// atom is at PIN_80
+flex10ke_io \data[3]~I (
+	.datain(gnd),
+	.clk(gnd),
+	.ena(vcc),
+	.aclr(gnd),
+	.oe(gnd),
+	.modesel(11'b01010000001),
+	.dataout(\data[3]~dataout ),
+	.padio(data[3]));
+// synopsys translate_off
+// defparam \data[3]~I .feedback_mode = "from_pin";
+// defparam \data[3]~I .operation_mode = "input";
+// defparam \data[3]~I .reg_source_mode = "none";
+// synopsys translate_on
+
+// atom is at PIN_26
+flex10ke_io \data[2]~I (
+	.datain(gnd),
+	.clk(gnd),
+	.ena(vcc),
+	.aclr(gnd),
+	.oe(gnd),
+	.modesel(11'b01010000001),
+	.dataout(\data[2]~dataout ),
+	.padio(data[2]));
+// synopsys translate_off
+// defparam \data[2]~I .feedback_mode = "from_pin";
+// defparam \data[2]~I .operation_mode = "input";
+// defparam \data[2]~I .reg_source_mode = "none";
+// synopsys translate_on
+
+// atom is at PIN_28
+flex10ke_io \data[1]~I (
+	.datain(gnd),
+	.clk(gnd),
+	.ena(vcc),
+	.aclr(gnd),
+	.oe(gnd),
+	.modesel(11'b01010000001),
+	.dataout(\data[1]~dataout ),
+	.padio(data[1]));
+// synopsys translate_off
+// defparam \data[1]~I .feedback_mode = "from_pin";
+// defparam \data[1]~I .operation_mode = "input";
+// defparam \data[1]~I .reg_source_mode = "none";
+// synopsys translate_on
+
+// atom is at PIN_180
+flex10ke_io \data[0]~I (
+	.datain(gnd),
+	.clk(gnd),
+	.ena(vcc),
+	.aclr(gnd),
+	.oe(gnd),
+	.modesel(11'b01010000001),
+	.dataout(\data[0]~dataout ),
+	.padio(data[0]));
+// synopsys translate_off
+// defparam \data[0]~I .feedback_mode = "from_pin";
+// defparam \data[0]~I .operation_mode = "input";
+// defparam \data[0]~I .reg_source_mode = "none";
+// synopsys translate_on
+
+// atom is at LC1_F9
+flex10ke_lcell \Add0|adder|result_node|cs_buffer[0] (
+// Equation(s):
+// \Add0|adder|result_node|cs_buffer[0]~combout  = \data[0]~dataout 
+// \Add0|adder|result_node|cs_buffer[0]~COUT  = CARRY(\data[0]~dataout )
+
+	.dataa(vcc),
+	.datab(\data[0]~dataout ),
+	.datac(vcc),
+	.datad(vcc),
+	.aclr(gnd),
+	.aload(gnd),
+	.clk(gnd),
+	.cin(gnd),
+	.cascin(vcc),
+	.modesel(7'b1000010),
+	.combout(\Add0|adder|result_node|cs_buffer[0]~combout ),
+	.regout(),
+	.cout(\Add0|adder|result_node|cs_buffer[0]~COUT ),
+	.cascout(),
+	.pathsel(10'b0010000010));
+// synopsys translate_off
+// defparam \Add0|adder|result_node|cs_buffer[0] .clock_enable_mode = "false";
+// defparam \Add0|adder|result_node|cs_buffer[0] .lut_mask = "cccc";
+// defparam \Add0|adder|result_node|cs_buffer[0] .operation_mode = "arithmetic";
+// defparam \Add0|adder|result_node|cs_buffer[0] .output_mode = "comb_only";
+// defparam \Add0|adder|result_node|cs_buffer[0] .packed_mode = "false";
+// synopsys translate_on
+
+// atom is at LC2_F9
+flex10ke_lcell \Add0|adder|result_node|cs_buffer[1] (
+// Equation(s):
+// \Add0|adder|result_node|cs_buffer[1]~combout  = \data[1]~dataout  $ \Add0|adder|result_node|cs_buffer[0]~COUT 
+// \Add0|adder|result_node|cs_buffer[1]~COUT  = CARRY(\data[1]~dataout  # \Add0|adder|result_node|cs_buffer[0]~COUT )
+
+	.dataa(vcc),
+	.datab(\data[1]~dataout ),
+	.datac(vcc),
+	.datad(vcc),
+	.aclr(gnd),
+	.aload(gnd),
+	.clk(gnd),
+	.cin(\Add0|adder|result_node|cs_buffer[0]~COUT ),
+	.cascin(vcc),
+	.modesel(7'b1000010),
+	.combout(\Add0|adder|result_node|cs_buffer[1]~combout ),
+	.regout(),
+	.cout(\Add0|adder|result_node|cs_buffer[1]~COUT ),
+	.cascout(),
+	.pathsel(10'b0110010010));
+// synopsys translate_off
+// defparam \Add0|adder|result_node|cs_buffer[1] .cin_used = "true";
+// defparam \Add0|adder|result_node|cs_buffer[1] .clock_enable_mode = "false";
+// defparam \Add0|adder|result_node|cs_buffer[1] .lut_mask = "3cfc";
+// defparam \Add0|adder|result_node|cs_buffer[1] .operation_mode = "arithmetic";
+// defparam \Add0|adder|result_node|cs_buffer[1] .output_mode = "comb_only";
+// defparam \Add0|adder|result_node|cs_buffer[1] .packed_mode = "false";
+// synopsys translate_on
+
+// atom is at LC3_F9
+flex10ke_lcell \Add0|adder|result_node|cs_buffer[2] (
+// Equation(s):
+// \Add0|adder|result_node|cs_buffer[2]~combout  = \data[2]~dataout  $ \Add0|adder|result_node|cs_buffer[1]~COUT 
+// \Add0|adder|result_node|cs_buffer[2]~COUT  = CARRY(\data[2]~dataout  # \Add0|adder|result_node|cs_buffer[1]~COUT )
+
+	.dataa(vcc),
+	.datab(\data[2]~dataout ),
+	.datac(vcc),
+	.datad(vcc),
+	.aclr(gnd),
+	.aload(gnd),
+	.clk(gnd),
+	.cin(\Add0|adder|result_node|cs_buffer[1]~COUT ),
+	.cascin(vcc),
+	.modesel(7'b1000010),
+	.combout(\Add0|adder|result_node|cs_buffer[2]~combout ),
+	.regout(),
+	.cout(\Add0|adder|result_node|cs_buffer[2]~COUT ),
+	.cascout(),
+	.pathsel(10'b0110010010));
+// synopsys translate_off
+// defparam \Add0|adder|result_node|cs_buffer[2] .cin_used = "true";
+// defparam \Add0|adder|result_node|cs_buffer[2] .clock_enable_mode = "false";
+// defparam \Add0|adder|result_node|cs_buffer[2] .lut_mask = "3cfc";
+// defparam \Add0|adder|result_node|cs_buffer[2] .operation_mode = "arithmetic";
+// defparam \Add0|adder|result_node|cs_buffer[2] .output_mode = "comb_only";
+// defparam \Add0|adder|result_node|cs_buffer[2] .packed_mode = "false";
+// synopsys translate_on
+
+// atom is at LC6_F9
+flex10ke_lcell \Add0|adder|result_node|cs_buffer[5] (
+// Equation(s):
+// \Add0|adder|result_node|cs_buffer[5]~combout  = \data[5]~dataout  $ \Add0|adder|result_node|cs_buffer[4]~COUT 
+// \Add0|adder|result_node|cs_buffer[5]~COUT  = CARRY(\data[5]~dataout  # \Add0|adder|result_node|cs_buffer[4]~COUT )
+
+	.dataa(vcc),
+	.datab(\data[5]~dataout ),
+	.datac(vcc),
+	.datad(vcc),
+	.aclr(gnd),
+	.aload(gnd),
+	.clk(gnd),
+	.cin(\Add0|adder|result_node|cs_buffer[4]~COUT ),
+	.cascin(vcc),
+	.modesel(7'b1000010),
+	.combout(\Add0|adder|result_node|cs_buffer[5]~combout ),
+	.regout(),
+	.cout(\Add0|adder|result_node|cs_buffer[5]~COUT ),
+	.cascout(),
+	.pathsel(10'b0110010010));
+// synopsys translate_off
+// defparam \Add0|adder|result_node|cs_buffer[5] .cin_used = "true";
+// defparam \Add0|adder|result_node|cs_buffer[5] .clock_enable_mode = "false";
+// defparam \Add0|adder|result_node|cs_buffer[5] .lut_mask = "3cfc";
+// defparam \Add0|adder|result_node|cs_buffer[5] .operation_mode = "arithmetic";
+// defparam \Add0|adder|result_node|cs_buffer[5] .output_mode = "comb_only";
+// defparam \Add0|adder|result_node|cs_buffer[5] .packed_mode = "false";
+// synopsys translate_on
+
+// atom is at LC8_F9
+flex10ke_lcell \Add0|adder|result_node|cs_buffer[7] (
+// Equation(s):
+// \Add0|adder|result_node|cs_buffer[7]~combout  = \data[7]~dataout  $ \Add0|adder|result_node|cs_buffer[6]~COUT 
+// \Add0|adder|result_node|cs_buffer[7]~COUT  = CARRY(\data[7]~dataout  # \Add0|adder|result_node|cs_buffer[6]~COUT )
+
+	.dataa(vcc),
+	.datab(\data[7]~dataout ),
+	.datac(vcc),
+	.datad(vcc),
+	.aclr(gnd),
+	.aload(gnd),
+	.clk(gnd),
+	.cin(\Add0|adder|result_node|cs_buffer[6]~COUT ),
+	.cascin(vcc),
+	.modesel(7'b1000010),
+	.combout(\Add0|adder|result_node|cs_buffer[7]~combout ),
+	.regout(),
+	.cout(\Add0|adder|result_node|cs_buffer[7]~COUT ),
+	.cascout(),
+	.pathsel(10'b0110010010));
+// synopsys translate_off
+// defparam \Add0|adder|result_node|cs_buffer[7] .cin_used = "true";
+// defparam \Add0|adder|result_node|cs_buffer[7] .clock_enable_mode = "false";
+// defparam \Add0|adder|result_node|cs_buffer[7] .lut_mask = "3cfc";
+// defparam \Add0|adder|result_node|cs_buffer[7] .operation_mode = "arithmetic";
+// defparam \Add0|adder|result_node|cs_buffer[7] .output_mode = "comb_only";
+// defparam \Add0|adder|result_node|cs_buffer[7] .packed_mode = "false";
+// synopsys translate_on
+
+// atom is at PIN_158
+flex10ke_io \data[8]~I (
+	.datain(gnd),
+	.clk(gnd),
+	.ena(vcc),
+	.aclr(gnd),
+	.oe(gnd),
+	.modesel(11'b01010000001),
+	.dataout(\data[8]~dataout ),
+	.padio(data[8]));
+// synopsys translate_off
+// defparam \data[8]~I .feedback_mode = "from_pin";
+// defparam \data[8]~I .operation_mode = "input";
+// defparam \data[8]~I .reg_source_mode = "none";
+// synopsys translate_on
+
+// atom is at LC1_F11
+flex10ke_lcell \Add0|adder|result_node|cs_buffer[8] (
+// Equation(s):
+// \Add0|adder|result_node|cs_buffer[8]~combout  = \data[8]~dataout  $ \Add0|adder|result_node|cs_buffer[7]~COUT 
+// \Add0|adder|result_node|cs_buffer[8]~COUT  = CARRY(\data[8]~dataout  # \Add0|adder|result_node|cs_buffer[7]~COUT )
+
+	.dataa(vcc),
+	.datab(\data[8]~dataout ),
+	.datac(vcc),
+	.datad(vcc),
+	.aclr(gnd),
+	.aload(gnd),
+	.clk(gnd),
+	.cin(\Add0|adder|result_node|cs_buffer[7]~COUT ),
+	.cascin(vcc),
+	.modesel(7'b1000010),
+	.combout(\Add0|adder|result_node|cs_buffer[8]~combout ),
+	.regout(),
+	.cout(\Add0|adder|result_node|cs_buffer[8]~COUT ),
+	.cascout(),
+	.pathsel(10'b0110010010));
+// synopsys translate_off
+// defparam \Add0|adder|result_node|cs_buffer[8] .cin_used = "true";
+// defparam \Add0|adder|result_node|cs_buffer[8] .clock_enable_mode = "false";
+// defparam \Add0|adder|result_node|cs_buffer[8] .lut_mask = "3cfc";
+// defparam \Add0|adder|result_node|cs_buffer[8] .operation_mode = "arithmetic";
+// defparam \Add0|adder|result_node|cs_buffer[8] .output_mode = "comb_only";
+// defparam \Add0|adder|result_node|cs_buffer[8] .packed_mode = "false";
+// synopsys translate_on
+
+// atom is at LC5_F1
+flex10ke_lcell \q_rtl_0|wysi_counter|counter_cell[15]~3 (
+// Equation(s):
+// \q_rtl_0|wysi_counter|counter_cell[15]~3_combout  = \q_rtl_0|wysi_counter|counter_cell[8]~regout  & (\Add0|adder|result_node|cs_buffer[8]~combout  # \q_rtl_0|wysi_counter|counter_cell[7]~regout  $ !\Add0|adder|result_node|cs_buffer[7]~combout ) # 
+// !\q_rtl_0|wysi_counter|counter_cell[8]~regout  & (\q_rtl_0|wysi_counter|counter_cell[7]~regout  $ !\Add0|adder|result_node|cs_buffer[7]~combout  # !\Add0|adder|result_node|cs_buffer[8]~combout )
+
+	.dataa(\q_rtl_0|wysi_counter|counter_cell[8]~regout ),
+	.datab(\q_rtl_0|wysi_counter|counter_cell[7]~regout ),
+	.datac(\Add0|adder|result_node|cs_buffer[7]~combout ),
+	.datad(\Add0|adder|result_node|cs_buffer[8]~combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.clk(gnd),
+	.cin(gnd),
+	.cascin(vcc),
+	.modesel(7'b1000001),
+	.combout(\q_rtl_0|wysi_counter|counter_cell[15]~3_combout ),
+	.regout(),
+	.cout(),
+	.cascout(),
+	.pathsel(10'b0000001111));
+// synopsys translate_off
+// defparam \q_rtl_0|wysi_counter|counter_cell[15]~3 .clock_enable_mode = "false";
+// defparam \q_rtl_0|wysi_counter|counter_cell[15]~3 .lut_mask = "ebd7";
+// defparam \q_rtl_0|wysi_counter|counter_cell[15]~3 .operation_mode = "normal";
+// defparam \q_rtl_0|wysi_counter|counter_cell[15]~3 .output_mode = "comb_only";
+// defparam \q_rtl_0|wysi_counter|counter_cell[15]~3 .packed_mode = "false";
+// synopsys translate_on
+
+// atom is at LC1_F5
+flex10ke_lcell \q_rtl_0|wysi_counter|counter_cell[8] (
+// Equation(s):
+// \q_rtl_0|wysi_counter|counter_cell[8]~regout  = DFFEA((\q_rtl_0|wysi_counter|counter_cell[8]~regout  $ (\en~dataout  & \q_rtl_0|wysi_counter|counter_cell[7]~COUT )) & \q_rtl_0|wysi_counter|counter_cell[15]~9_combout , GLOBAL(\clk~dataout ), , , 
+// \en~dataout , , )
+// \q_rtl_0|wysi_counter|counter_cell[8]~COUT  = CARRY(\q_rtl_0|wysi_counter|counter_cell[8]~regout  & (\q_rtl_0|wysi_counter|counter_cell[7]~COUT ))
+
+	.dataa(\en~dataout ),
+	.datab(\q_rtl_0|wysi_counter|counter_cell[15]~9_combout ),
+	.datac(vcc),
+	.datad(vcc),
+	.aclr(gnd),
+	.aload(gnd),
+	.clk(\clk~dataout ),
+	.cin(\q_rtl_0|wysi_counter|counter_cell[7]~COUT ),
+	.cascin(vcc),
+	.modesel(7'b0101000),
+	.combout(),
+	.regout(\q_rtl_0|wysi_counter|counter_cell[8]~regout ),
+	.cout(\q_rtl_0|wysi_counter|counter_cell[8]~COUT ),
+	.cascout(),
+	.pathsel(10'b1000100001));
+// synopsys translate_off
+// defparam \q_rtl_0|wysi_counter|counter_cell[8] .cin_used = "true";
+// defparam \q_rtl_0|wysi_counter|counter_cell[8] .clock_enable_mode = "true";
+// defparam \q_rtl_0|wysi_counter|counter_cell[8] .lut_mask = "6ca0";
+// defparam \q_rtl_0|wysi_counter|counter_cell[8] .operation_mode = "clrb_cntr";
+// defparam \q_rtl_0|wysi_counter|counter_cell[8] .output_mode = "reg_only";
+// defparam \q_rtl_0|wysi_counter|counter_cell[8] .packed_mode = "false";
+// synopsys translate_on
+
+// atom is at LC2_F5
+flex10ke_lcell \q_rtl_0|wysi_counter|counter_cell[9] (
+// Equation(s):
+// \q_rtl_0|wysi_counter|counter_cell[9]~regout  = DFFEA((\q_rtl_0|wysi_counter|counter_cell[9]~regout  $ (\en~dataout  & \q_rtl_0|wysi_counter|counter_cell[8]~COUT )) & \q_rtl_0|wysi_counter|counter_cell[15]~9_combout , GLOBAL(\clk~dataout ), , , 
+// \en~dataout , , )
+// \q_rtl_0|wysi_counter|counter_cell[9]~COUT  = CARRY(\q_rtl_0|wysi_counter|counter_cell[9]~regout  & (\q_rtl_0|wysi_counter|counter_cell[8]~COUT ))
+
+	.dataa(\en~dataout ),
+	.datab(\q_rtl_0|wysi_counter|counter_cell[15]~9_combout ),
+	.datac(vcc),
+	.datad(vcc),
+	.aclr(gnd),
+	.aload(gnd),
+	.clk(\clk~dataout ),
+	.cin(\q_rtl_0|wysi_counter|counter_cell[8]~COUT ),
+	.cascin(vcc),
+	.modesel(7'b0101000),
+	.combout(),
+	.regout(\q_rtl_0|wysi_counter|counter_cell[9]~regout ),
+	.cout(\q_rtl_0|wysi_counter|counter_cell[9]~COUT ),
+	.cascout(),
+	.pathsel(10'b1000100001));
+// synopsys translate_off
+// defparam \q_rtl_0|wysi_counter|counter_cell[9] .cin_used = "true";
+// defparam \q_rtl_0|wysi_counter|counter_cell[9] .clock_enable_mode = "true";
+// defparam \q_rtl_0|wysi_counter|counter_cell[9] .lut_mask = "6ca0";
+// defparam \q_rtl_0|wysi_counter|counter_cell[9] .operation_mode = "clrb_cntr";
+// defparam \q_rtl_0|wysi_counter|counter_cell[9] .output_mode = "reg_only";
+// defparam \q_rtl_0|wysi_counter|counter_cell[9] .packed_mode = "false";
+// synopsys translate_on
+
+// atom is at LC3_F5
+flex10ke_lcell \q_rtl_0|wysi_counter|counter_cell[10] (
+// Equation(s):
+// \q_rtl_0|wysi_counter|counter_cell[10]~regout  = DFFEA((\q_rtl_0|wysi_counter|counter_cell[10]~regout  $ (\en~dataout  & \q_rtl_0|wysi_counter|counter_cell[9]~COUT )) & \q_rtl_0|wysi_counter|counter_cell[15]~9_combout , GLOBAL(\clk~dataout ), , , 
+// \en~dataout , , )
+// \q_rtl_0|wysi_counter|counter_cell[10]~COUT  = CARRY(\q_rtl_0|wysi_counter|counter_cell[10]~regout  & (\q_rtl_0|wysi_counter|counter_cell[9]~COUT ))
+
+	.dataa(\en~dataout ),
+	.datab(\q_rtl_0|wysi_counter|counter_cell[15]~9_combout ),
+	.datac(vcc),
+	.datad(vcc),
+	.aclr(gnd),
+	.aload(gnd),
+	.clk(\clk~dataout ),
+	.cin(\q_rtl_0|wysi_counter|counter_cell[9]~COUT ),
+	.cascin(vcc),
+	.modesel(7'b0101000),
+	.combout(),
+	.regout(\q_rtl_0|wysi_counter|counter_cell[10]~regout ),
+	.cout(\q_rtl_0|wysi_counter|counter_cell[10]~COUT ),
+	.cascout(),
+	.pathsel(10'b1000100001));
+// synopsys translate_off
+// defparam \q_rtl_0|wysi_counter|counter_cell[10] .cin_used = "true";
+// defparam \q_rtl_0|wysi_counter|counter_cell[10] .clock_enable_mode = "true";
+// defparam \q_rtl_0|wysi_counter|counter_cell[10] .lut_mask = "6ca0";
+// defparam \q_rtl_0|wysi_counter|counter_cell[10] .operation_mode = "clrb_cntr";
+// defparam \q_rtl_0|wysi_counter|counter_cell[10] .output_mode = "reg_only";
+// defparam \q_rtl_0|wysi_counter|counter_cell[10] .packed_mode = "false";
+// synopsys translate_on
+
+// atom is at LC4_F5
+flex10ke_lcell \q_rtl_0|wysi_counter|counter_cell[11] (
+// Equation(s):
+// \q_rtl_0|wysi_counter|counter_cell[11]~regout  = DFFEA((\q_rtl_0|wysi_counter|counter_cell[11]~regout  $ (\en~dataout  & \q_rtl_0|wysi_counter|counter_cell[10]~COUT )) & \q_rtl_0|wysi_counter|counter_cell[15]~9_combout , GLOBAL(\clk~dataout ), , , 
+// \en~dataout , , )
+// \q_rtl_0|wysi_counter|counter_cell[11]~COUT  = CARRY(\q_rtl_0|wysi_counter|counter_cell[11]~regout  & (\q_rtl_0|wysi_counter|counter_cell[10]~COUT ))
+
+	.dataa(\en~dataout ),
+	.datab(\q_rtl_0|wysi_counter|counter_cell[15]~9_combout ),
+	.datac(vcc),
+	.datad(vcc),
+	.aclr(gnd),
+	.aload(gnd),
+	.clk(\clk~dataout ),
+	.cin(\q_rtl_0|wysi_counter|counter_cell[10]~COUT ),
+	.cascin(vcc),
+	.modesel(7'b0101000),
+	.combout(),
+	.regout(\q_rtl_0|wysi_counter|counter_cell[11]~regout ),
+	.cout(\q_rtl_0|wysi_counter|counter_cell[11]~COUT ),
+	.cascout(),
+	.pathsel(10'b1000100001));
+// synopsys translate_off
+// defparam \q_rtl_0|wysi_counter|counter_cell[11] .cin_used = "true";
+// defparam \q_rtl_0|wysi_counter|counter_cell[11] .clock_enable_mode = "true";
+// defparam \q_rtl_0|wysi_counter|counter_cell[11] .lut_mask = "6ca0";
+// defparam \q_rtl_0|wysi_counter|counter_cell[11] .operation_mode = "clrb_cntr";
+// defparam \q_rtl_0|wysi_counter|counter_cell[11] .output_mode = "reg_only";
+// defparam \q_rtl_0|wysi_counter|counter_cell[11] .packed_mode = "false";
+// synopsys translate_on
+
+// atom is at LC5_F5
+flex10ke_lcell \q_rtl_0|wysi_counter|counter_cell[12] (
+// Equation(s):
+// \q_rtl_0|wysi_counter|counter_cell[12]~regout  = DFFEA((\q_rtl_0|wysi_counter|counter_cell[12]~regout  $ (\en~dataout  & \q_rtl_0|wysi_counter|counter_cell[11]~COUT )) & \q_rtl_0|wysi_counter|counter_cell[15]~9_combout , GLOBAL(\clk~dataout ), , , 
+// \en~dataout , , )
+// \q_rtl_0|wysi_counter|counter_cell[12]~COUT  = CARRY(\q_rtl_0|wysi_counter|counter_cell[12]~regout  & (\q_rtl_0|wysi_counter|counter_cell[11]~COUT ))
+
+	.dataa(\en~dataout ),
+	.datab(\q_rtl_0|wysi_counter|counter_cell[15]~9_combout ),
+	.datac(vcc),
+	.datad(vcc),
+	.aclr(gnd),
+	.aload(gnd),
+	.clk(\clk~dataout ),
+	.cin(\q_rtl_0|wysi_counter|counter_cell[11]~COUT ),
+	.cascin(vcc),
+	.modesel(7'b0101000),
+	.combout(),
+	.regout(\q_rtl_0|wysi_counter|counter_cell[12]~regout ),
+	.cout(\q_rtl_0|wysi_counter|counter_cell[12]~COUT ),
+	.cascout(),
+	.pathsel(10'b1000100001));
+// synopsys translate_off
+// defparam \q_rtl_0|wysi_counter|counter_cell[12] .cin_used = "true";
+// defparam \q_rtl_0|wysi_counter|counter_cell[12] .clock_enable_mode = "true";
+// defparam \q_rtl_0|wysi_counter|counter_cell[12] .lut_mask = "6ca0";
+// defparam \q_rtl_0|wysi_counter|counter_cell[12] .operation_mode = "clrb_cntr";
+// defparam \q_rtl_0|wysi_counter|counter_cell[12] .output_mode = "reg_only";
+// defparam \q_rtl_0|wysi_counter|counter_cell[12] .packed_mode = "false";
+// synopsys translate_on
+
+// atom is at LC6_F5
+flex10ke_lcell \q_rtl_0|wysi_counter|counter_cell[13] (
+// Equation(s):
+// \q_rtl_0|wysi_counter|counter_cell[13]~regout  = DFFEA((\q_rtl_0|wysi_counter|counter_cell[13]~regout  $ (\en~dataout  & \q_rtl_0|wysi_counter|counter_cell[12]~COUT )) & \q_rtl_0|wysi_counter|counter_cell[15]~9_combout , GLOBAL(\clk~dataout ), , , 
+// \en~dataout , , )
+// \q_rtl_0|wysi_counter|counter_cell[13]~COUT  = CARRY(\q_rtl_0|wysi_counter|counter_cell[13]~regout  & (\q_rtl_0|wysi_counter|counter_cell[12]~COUT ))
+
+	.dataa(\en~dataout ),
+	.datab(\q_rtl_0|wysi_counter|counter_cell[15]~9_combout ),
+	.datac(vcc),
+	.datad(vcc),
+	.aclr(gnd),
+	.aload(gnd),
+	.clk(\clk~dataout ),
+	.cin(\q_rtl_0|wysi_counter|counter_cell[12]~COUT ),
+	.cascin(vcc),
+	.modesel(7'b0101000),
+	.combout(),
+	.regout(\q_rtl_0|wysi_counter|counter_cell[13]~regout ),
+	.cout(\q_rtl_0|wysi_counter|counter_cell[13]~COUT ),
+	.cascout(),
+	.pathsel(10'b1000100001));
+// synopsys translate_off
+// defparam \q_rtl_0|wysi_counter|counter_cell[13] .cin_used = "true";
+// defparam \q_rtl_0|wysi_counter|counter_cell[13] .clock_enable_mode = "true";
+// defparam \q_rtl_0|wysi_counter|counter_cell[13] .lut_mask = "6ca0";
+// defparam \q_rtl_0|wysi_counter|counter_cell[13] .operation_mode = "clrb_cntr";
+// defparam \q_rtl_0|wysi_counter|counter_cell[13] .output_mode = "reg_only";
+// defparam \q_rtl_0|wysi_counter|counter_cell[13] .packed_mode = "false";
+// synopsys translate_on
+
+// atom is at LC7_F5
+flex10ke_lcell \q_rtl_0|wysi_counter|counter_cell[14] (
+// Equation(s):
+// \q_rtl_0|wysi_counter|counter_cell[14]~regout  = DFFEA((\q_rtl_0|wysi_counter|counter_cell[14]~regout  $ (\en~dataout  & \q_rtl_0|wysi_counter|counter_cell[13]~COUT )) & \q_rtl_0|wysi_counter|counter_cell[15]~9_combout , GLOBAL(\clk~dataout ), , , 
+// \en~dataout , , )
+// \q_rtl_0|wysi_counter|counter_cell[14]~COUT  = CARRY(\q_rtl_0|wysi_counter|counter_cell[14]~regout  & (\q_rtl_0|wysi_counter|counter_cell[13]~COUT ))
+
+	.dataa(\en~dataout ),
+	.datab(\q_rtl_0|wysi_counter|counter_cell[15]~9_combout ),
+	.datac(vcc),
+	.datad(vcc),
+	.aclr(gnd),
+	.aload(gnd),
+	.clk(\clk~dataout ),
+	.cin(\q_rtl_0|wysi_counter|counter_cell[13]~COUT ),
+	.cascin(vcc),
+	.modesel(7'b0101000),
+	.combout(),
+	.regout(\q_rtl_0|wysi_counter|counter_cell[14]~regout ),
+	.cout(\q_rtl_0|wysi_counter|counter_cell[14]~COUT ),
+	.cascout(),
+	.pathsel(10'b1000100001));
+// synopsys translate_off
+// defparam \q_rtl_0|wysi_counter|counter_cell[14] .cin_used = "true";
+// defparam \q_rtl_0|wysi_counter|counter_cell[14] .clock_enable_mode = "true";
+// defparam \q_rtl_0|wysi_counter|counter_cell[14] .lut_mask = "6ca0";
+// defparam \q_rtl_0|wysi_counter|counter_cell[14] .operation_mode = "clrb_cntr";
+// defparam \q_rtl_0|wysi_counter|counter_cell[14] .output_mode = "reg_only";
+// defparam \q_rtl_0|wysi_counter|counter_cell[14] .packed_mode = "false";
+// synopsys translate_on
+
+// atom is at LC8_F5
+flex10ke_lcell \q_rtl_0|wysi_counter|counter_cell[15] (
+// Equation(s):
+// \q_rtl_0|wysi_counter|counter_cell[15]~regout  = DFFEA((\q_rtl_0|wysi_counter|counter_cell[15]~regout  $ (\en~dataout  & \q_rtl_0|wysi_counter|counter_cell[14]~COUT )) & \q_rtl_0|wysi_counter|counter_cell[15]~9_combout , GLOBAL(\clk~dataout ), , , 
+// \en~dataout , , )
+
+	.dataa(\en~dataout ),
+	.datab(\q_rtl_0|wysi_counter|counter_cell[15]~9_combout ),
+	.datac(vcc),
+	.datad(vcc),
+	.aclr(gnd),
+	.aload(gnd),
+	.clk(\clk~dataout ),
+	.cin(\q_rtl_0|wysi_counter|counter_cell[14]~COUT ),
+	.cascin(vcc),
+	.modesel(7'b0101000),
+	.combout(),
+	.regout(\q_rtl_0|wysi_counter|counter_cell[15]~regout ),
+	.cout(),
+	.cascout(),
+	.pathsel(10'b0000100001));
+// synopsys translate_off
+// defparam \q_rtl_0|wysi_counter|counter_cell[15] .cin_used = "true";
+// defparam \q_rtl_0|wysi_counter|counter_cell[15] .clock_enable_mode = "true";
+// defparam \q_rtl_0|wysi_counter|counter_cell[15] .lut_mask = "6c6c";
+// defparam \q_rtl_0|wysi_counter|counter_cell[15] .operation_mode = "clrb_cntr";
+// defparam \q_rtl_0|wysi_counter|counter_cell[15] .output_mode = "reg_only";
+// defparam \q_rtl_0|wysi_counter|counter_cell[15] .packed_mode = "false";
+// synopsys translate_on
+
+// atom is at PIN_182
+flex10ke_io \data[15]~I (
+	.datain(gnd),
+	.clk(gnd),
+	.ena(vcc),
+	.aclr(gnd),
+	.oe(gnd),
+	.modesel(11'b01010000001),
+	.dataout(\data[15]~dataout ),
+	.padio(data[15]));
+// synopsys translate_off
+// defparam \data[15]~I .feedback_mode = "from_pin";
+// defparam \data[15]~I .operation_mode = "input";
+// defparam \data[15]~I .reg_source_mode = "none";
+// synopsys translate_on
+
+// atom is at PIN_83
+flex10ke_io \data[14]~I (
+	.datain(gnd),
+	.clk(gnd),
+	.ena(vcc),
+	.aclr(gnd),
+	.oe(gnd),
+	.modesel(11'b01010000001),
+	.dataout(\data[14]~dataout ),
+	.padio(data[14]));
+// synopsys translate_off
+// defparam \data[14]~I .feedback_mode = "from_pin";
+// defparam \data[14]~I .operation_mode = "input";
+// defparam \data[14]~I .reg_source_mode = "none";
+// synopsys translate_on
+
+// atom is at PIN_97
+flex10ke_io \data[13]~I (
+	.datain(gnd),
+	.clk(gnd),
+	.ena(vcc),
+	.aclr(gnd),
+	.oe(gnd),
+	.modesel(11'b01010000001),
+	.dataout(\data[13]~dataout ),
+	.padio(data[13]));
+// synopsys translate_off
+// defparam \data[13]~I .feedback_mode = "from_pin";
+// defparam \data[13]~I .operation_mode = "input";
+// defparam \data[13]~I .reg_source_mode = "none";
+// synopsys translate_on
+
+// atom is at PIN_177
+flex10ke_io \data[12]~I (
+	.datain(gnd),
+	.clk(gnd),
+	.ena(vcc),
+	.aclr(gnd),
+	.oe(gnd),
+	.modesel(11'b01010000001),
+	.dataout(\data[12]~dataout ),
+	.padio(data[12]));
+// synopsys translate_off
+// defparam \data[12]~I .feedback_mode = "from_pin";
+// defparam \data[12]~I .operation_mode = "input";
+// defparam \data[12]~I .reg_source_mode = "none";
+// synopsys translate_on
+
+// atom is at PIN_166
+flex10ke_io \data[11]~I (
+	.datain(gnd),
+	.clk(gnd),
+	.ena(vcc),
+	.aclr(gnd),
+	.oe(gnd),
+	.modesel(11'b01010000001),
+	.dataout(\data[11]~dataout ),
+	.padio(data[11]));
+// synopsys translate_off
+// defparam \data[11]~I .feedback_mode = "from_pin";
+// defparam \data[11]~I .operation_mode = "input";
+// defparam \data[11]~I .reg_source_mode = "none";
+// synopsys translate_on
+
+// atom is at PIN_92
+flex10ke_io \data[10]~I (
+	.datain(gnd),
+	.clk(gnd),
+	.ena(vcc),
+	.aclr(gnd),
+	.oe(gnd),
+	.modesel(11'b01010000001),
+	.dataout(\data[10]~dataout ),
+	.padio(data[10]));
+// synopsys translate_off
+// defparam \data[10]~I .feedback_mode = "from_pin";
+// defparam \data[10]~I .operation_mode = "input";
+// defparam \data[10]~I .reg_source_mode = "none";
+// synopsys translate_on
+
+// atom is at PIN_167
+flex10ke_io \data[9]~I (
+	.datain(gnd),
+	.clk(gnd),
+	.ena(vcc),
+	.aclr(gnd),
+	.oe(gnd),
+	.modesel(11'b01010000001),
+	.dataout(\data[9]~dataout ),
+	.padio(data[9]));
+// synopsys translate_off
+// defparam \data[9]~I .feedback_mode = "from_pin";
+// defparam \data[9]~I .operation_mode = "input";
+// defparam \data[9]~I .reg_source_mode = "none";
+// synopsys translate_on
+
+// atom is at LC2_F11
+flex10ke_lcell \Add0|adder|result_node|cs_buffer[9] (
+// Equation(s):
+// \Add0|adder|result_node|cs_buffer[9]~combout  = \data[9]~dataout  $ \Add0|adder|result_node|cs_buffer[8]~COUT 
+// \Add0|adder|result_node|cs_buffer[9]~COUT  = CARRY(\data[9]~dataout  # \Add0|adder|result_node|cs_buffer[8]~COUT )
+
+	.dataa(vcc),
+	.datab(\data[9]~dataout ),
+	.datac(vcc),
+	.datad(vcc),
+	.aclr(gnd),
+	.aload(gnd),
+	.clk(gnd),
+	.cin(\Add0|adder|result_node|cs_buffer[8]~COUT ),
+	.cascin(vcc),
+	.modesel(7'b1000010),
+	.combout(\Add0|adder|result_node|cs_buffer[9]~combout ),
+	.regout(),
+	.cout(\Add0|adder|result_node|cs_buffer[9]~COUT ),
+	.cascout(),
+	.pathsel(10'b0110010010));
+// synopsys translate_off
+// defparam \Add0|adder|result_node|cs_buffer[9] .cin_used = "true";
+// defparam \Add0|adder|result_node|cs_buffer[9] .clock_enable_mode = "false";
+// defparam \Add0|adder|result_node|cs_buffer[9] .lut_mask = "3cfc";
+// defparam \Add0|adder|result_node|cs_buffer[9] .operation_mode = "arithmetic";
+// defparam \Add0|adder|result_node|cs_buffer[9] .output_mode = "comb_only";
+// defparam \Add0|adder|result_node|cs_buffer[9] .packed_mode = "false";
+// synopsys translate_on
+
+// atom is at LC3_F11
+flex10ke_lcell \Add0|adder|result_node|cs_buffer[10] (
+// Equation(s):
+// \Add0|adder|result_node|cs_buffer[10]~combout  = \data[10]~dataout  $ \Add0|adder|result_node|cs_buffer[9]~COUT 
+// \Add0|adder|result_node|cs_buffer[10]~COUT  = CARRY(\data[10]~dataout  # \Add0|adder|result_node|cs_buffer[9]~COUT )
+
+	.dataa(vcc),
+	.datab(\data[10]~dataout ),
+	.datac(vcc),
+	.datad(vcc),
+	.aclr(gnd),
+	.aload(gnd),
+	.clk(gnd),
+	.cin(\Add0|adder|result_node|cs_buffer[9]~COUT ),
+	.cascin(vcc),
+	.modesel(7'b1000010),
+	.combout(\Add0|adder|result_node|cs_buffer[10]~combout ),
+	.regout(),
+	.cout(\Add0|adder|result_node|cs_buffer[10]~COUT ),
+	.cascout(),
+	.pathsel(10'b0110010010));
+// synopsys translate_off
+// defparam \Add0|adder|result_node|cs_buffer[10] .cin_used = "true";
+// defparam \Add0|adder|result_node|cs_buffer[10] .clock_enable_mode = "false";
+// defparam \Add0|adder|result_node|cs_buffer[10] .lut_mask = "3cfc";
+// defparam \Add0|adder|result_node|cs_buffer[10] .operation_mode = "arithmetic";
+// defparam \Add0|adder|result_node|cs_buffer[10] .output_mode = "comb_only";
+// defparam \Add0|adder|result_node|cs_buffer[10] .packed_mode = "false";
+// synopsys translate_on
+
+// atom is at LC5_F11
+flex10ke_lcell \Add0|adder|result_node|cs_buffer[12] (
+// Equation(s):
+// \Add0|adder|result_node|cs_buffer[12]~combout  = \data[12]~dataout  $ \Add0|adder|result_node|cs_buffer[11]~COUT 
+// \Add0|adder|result_node|cs_buffer[12]~COUT  = CARRY(\data[12]~dataout  # \Add0|adder|result_node|cs_buffer[11]~COUT )
+
+	.dataa(vcc),
+	.datab(\data[12]~dataout ),
+	.datac(vcc),
+	.datad(vcc),
+	.aclr(gnd),
+	.aload(gnd),
+	.clk(gnd),
+	.cin(\Add0|adder|result_node|cs_buffer[11]~COUT ),
+	.cascin(vcc),
+	.modesel(7'b1000010),
+	.combout(\Add0|adder|result_node|cs_buffer[12]~combout ),
+	.regout(),
+	.cout(\Add0|adder|result_node|cs_buffer[12]~COUT ),
+	.cascout(),
+	.pathsel(10'b0110010010));
+// synopsys translate_off
+// defparam \Add0|adder|result_node|cs_buffer[12] .cin_used = "true";
+// defparam \Add0|adder|result_node|cs_buffer[12] .clock_enable_mode = "false";
+// defparam \Add0|adder|result_node|cs_buffer[12] .lut_mask = "3cfc";
+// defparam \Add0|adder|result_node|cs_buffer[12] .operation_mode = "arithmetic";
+// defparam \Add0|adder|result_node|cs_buffer[12] .output_mode = "comb_only";
+// defparam \Add0|adder|result_node|cs_buffer[12] .packed_mode = "false";
+// synopsys translate_on
+
+// atom is at LC6_F11
+flex10ke_lcell \Add0|adder|result_node|cs_buffer[13] (
+// Equation(s):
+// \Add0|adder|result_node|cs_buffer[13]~combout  = \data[13]~dataout  $ \Add0|adder|result_node|cs_buffer[12]~COUT 
+// \Add0|adder|result_node|cs_buffer[13]~COUT  = CARRY(\data[13]~dataout  # \Add0|adder|result_node|cs_buffer[12]~COUT )
+
+	.dataa(vcc),
+	.datab(\data[13]~dataout ),
+	.datac(vcc),
+	.datad(vcc),
+	.aclr(gnd),
+	.aload(gnd),
+	.clk(gnd),
+	.cin(\Add0|adder|result_node|cs_buffer[12]~COUT ),
+	.cascin(vcc),
+	.modesel(7'b1000010),
+	.combout(\Add0|adder|result_node|cs_buffer[13]~combout ),
+	.regout(),
+	.cout(\Add0|adder|result_node|cs_buffer[13]~COUT ),
+	.cascout(),
+	.pathsel(10'b0110010010));
+// synopsys translate_off
+// defparam \Add0|adder|result_node|cs_buffer[13] .cin_used = "true";
+// defparam \Add0|adder|result_node|cs_buffer[13] .clock_enable_mode = "false";
+// defparam \Add0|adder|result_node|cs_buffer[13] .lut_mask = "3cfc";
+// defparam \Add0|adder|result_node|cs_buffer[13] .operation_mode = "arithmetic";
+// defparam \Add0|adder|result_node|cs_buffer[13] .output_mode = "comb_only";
+// defparam \Add0|adder|result_node|cs_buffer[13] .packed_mode = "false";
+// synopsys translate_on
+
+// atom is at LC7_F11
+flex10ke_lcell \Add0|adder|result_node|cs_buffer[14] (
+// Equation(s):
+// \Add0|adder|result_node|cs_buffer[14]~combout  = \data[14]~dataout  $ \Add0|adder|result_node|cs_buffer[13]~COUT 
+// \Add0|adder|result_node|cs_buffer[14]~COUT  = CARRY(\data[14]~dataout  # \Add0|adder|result_node|cs_buffer[13]~COUT )
+
+	.dataa(vcc),
+	.datab(\data[14]~dataout ),
+	.datac(vcc),
+	.datad(vcc),
+	.aclr(gnd),
+	.aload(gnd),
+	.clk(gnd),
+	.cin(\Add0|adder|result_node|cs_buffer[13]~COUT ),
+	.cascin(vcc),
+	.modesel(7'b1000010),
+	.combout(\Add0|adder|result_node|cs_buffer[14]~combout ),
+	.regout(),
+	.cout(\Add0|adder|result_node|cs_buffer[14]~COUT ),
+	.cascout(),
+	.pathsel(10'b0110010010));
+// synopsys translate_off
+// defparam \Add0|adder|result_node|cs_buffer[14] .cin_used = "true";
+// defparam \Add0|adder|result_node|cs_buffer[14] .clock_enable_mode = "false";
+// defparam \Add0|adder|result_node|cs_buffer[14] .lut_mask = "3cfc";
+// defparam \Add0|adder|result_node|cs_buffer[14] .operation_mode = "arithmetic";
+// defparam \Add0|adder|result_node|cs_buffer[14] .output_mode = "comb_only";
+// defparam \Add0|adder|result_node|cs_buffer[14] .packed_mode = "false";
+// synopsys translate_on
+
+// atom is at LC8_F11
+flex10ke_lcell \Add0|adder|unreg_res_node[15] (
+// Equation(s):
+// \Add0|adder|unreg_res_node[15]~combout  = \Add0|adder|result_node|cs_buffer[14]~COUT  $ \data[15]~dataout 
+
+	.dataa(vcc),
+	.datab(vcc),
+	.datac(vcc),
+	.datad(\data[15]~dataout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.clk(gnd),
+	.cin(\Add0|adder|result_node|cs_buffer[14]~COUT ),
+	.cascin(vcc),
+	.modesel(7'b1000001),
+	.combout(\Add0|adder|unreg_res_node[15]~combout ),
+	.regout(),
+	.cout(),
+	.cascout(),
+	.pathsel(10'b0000011000));
+// synopsys translate_off
+// defparam \Add0|adder|unreg_res_node[15] .cin_used = "true";
+// defparam \Add0|adder|unreg_res_node[15] .clock_enable_mode = "false";
+// defparam \Add0|adder|unreg_res_node[15] .lut_mask = "0ff0";
+// defparam \Add0|adder|unreg_res_node[15] .operation_mode = "normal";
+// defparam \Add0|adder|unreg_res_node[15] .output_mode = "comb_only";
+// defparam \Add0|adder|unreg_res_node[15] .packed_mode = "false";
+// synopsys translate_on
+
+// atom is at LC2_F4
+flex10ke_lcell \q_rtl_0|wysi_counter|counter_cell[15]~5 (
+// Equation(s):
+// \q_rtl_0|wysi_counter|counter_cell[15]~5_combout  = \q_rtl_0|wysi_counter|counter_cell[2]~regout  & (\Add0|adder|result_node|cs_buffer[2]~combout  # \q_rtl_0|wysi_counter|counter_cell[15]~regout  $ !\Add0|adder|unreg_res_node[15]~combout ) # 
+// !\q_rtl_0|wysi_counter|counter_cell[2]~regout  & (\q_rtl_0|wysi_counter|counter_cell[15]~regout  $ !\Add0|adder|unreg_res_node[15]~combout  # !\Add0|adder|result_node|cs_buffer[2]~combout )
+
+	.dataa(\q_rtl_0|wysi_counter|counter_cell[2]~regout ),
+	.datab(\q_rtl_0|wysi_counter|counter_cell[15]~regout ),
+	.datac(\Add0|adder|unreg_res_node[15]~combout ),
+	.datad(\Add0|adder|result_node|cs_buffer[2]~combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.clk(gnd),
+	.cin(gnd),
+	.cascin(vcc),
+	.modesel(7'b1000001),
+	.combout(\q_rtl_0|wysi_counter|counter_cell[15]~5_combout ),
+	.regout(),
+	.cout(),
+	.cascout(),
+	.pathsel(10'b0000001111));
+// synopsys translate_off
+// defparam \q_rtl_0|wysi_counter|counter_cell[15]~5 .clock_enable_mode = "false";
+// defparam \q_rtl_0|wysi_counter|counter_cell[15]~5 .lut_mask = "ebd7";
+// defparam \q_rtl_0|wysi_counter|counter_cell[15]~5 .operation_mode = "normal";
+// defparam \q_rtl_0|wysi_counter|counter_cell[15]~5 .output_mode = "comb_only";
+// defparam \q_rtl_0|wysi_counter|counter_cell[15]~5 .packed_mode = "false";
+// synopsys translate_on
+
+// atom is at LC3_F2
+flex10ke_lcell \q_rtl_0|wysi_counter|counter_cell[15]~16 (
+// Equation(s):
+// \q_rtl_0|wysi_counter|counter_cell[15]~47  = \q_rtl_0|wysi_counter|counter_cell[13]~regout  & !\Add0|adder|result_node|cs_buffer[13]~combout  & (\q_rtl_0|wysi_counter|counter_cell[5]~regout  $ \Add0|adder|result_node|cs_buffer[5]~combout ) # 
+// !\q_rtl_0|wysi_counter|counter_cell[13]~regout  & \Add0|adder|result_node|cs_buffer[13]~combout  & (\q_rtl_0|wysi_counter|counter_cell[5]~regout  $ \Add0|adder|result_node|cs_buffer[5]~combout )
+
+	.dataa(\q_rtl_0|wysi_counter|counter_cell[13]~regout ),
+	.datab(\Add0|adder|result_node|cs_buffer[13]~combout ),
+	.datac(\q_rtl_0|wysi_counter|counter_cell[5]~regout ),
+	.datad(\Add0|adder|result_node|cs_buffer[5]~combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.clk(gnd),
+	.cin(gnd),
+	.cascin(vcc),
+	.modesel(7'b1000001),
+	.combout(\q_rtl_0|wysi_counter|counter_cell[15]~16_combout ),
+	.regout(),
+	.cout(),
+	.cascout(\q_rtl_0|wysi_counter|counter_cell[15]~47 ),
+	.pathsel(10'b0000001111));
+// synopsys translate_off
+// defparam \q_rtl_0|wysi_counter|counter_cell[15]~16 .clock_enable_mode = "false";
+// defparam \q_rtl_0|wysi_counter|counter_cell[15]~16 .lut_mask = "0660";
+// defparam \q_rtl_0|wysi_counter|counter_cell[15]~16 .operation_mode = "normal";
+// defparam \q_rtl_0|wysi_counter|counter_cell[15]~16 .output_mode = "none";
+// defparam \q_rtl_0|wysi_counter|counter_cell[15]~16 .packed_mode = "false";
+// synopsys translate_on
+
+// atom is at LC4_F2
+flex10ke_lcell \q_rtl_0|wysi_counter|counter_cell[15]~20 (
+// Equation(s):
+// \q_rtl_0|wysi_counter|counter_cell[15]~20_combout  = (\q_rtl_0|wysi_counter|counter_cell[12]~regout  & !\Add0|adder|result_node|cs_buffer[12]~combout  & (\q_rtl_0|wysi_counter|counter_cell[0]~regout  $ \Add0|adder|result_node|cs_buffer[0]~combout ) # 
+// !\q_rtl_0|wysi_counter|counter_cell[12]~regout  & \Add0|adder|result_node|cs_buffer[12]~combout  & (\q_rtl_0|wysi_counter|counter_cell[0]~regout  $ \Add0|adder|result_node|cs_buffer[0]~combout )) & CASCADE(\q_rtl_0|wysi_counter|counter_cell[15]~47 )
+
+	.dataa(\q_rtl_0|wysi_counter|counter_cell[12]~regout ),
+	.datab(\Add0|adder|result_node|cs_buffer[12]~combout ),
+	.datac(\q_rtl_0|wysi_counter|counter_cell[0]~regout ),
+	.datad(\Add0|adder|result_node|cs_buffer[0]~combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.clk(gnd),
+	.cin(gnd),
+	.cascin(\q_rtl_0|wysi_counter|counter_cell[15]~47 ),
+	.modesel(7'b1000001),
+	.combout(\q_rtl_0|wysi_counter|counter_cell[15]~20_combout ),
+	.regout(),
+	.cout(),
+	.cascout(),
+	.pathsel(10'b0000001111));
+// synopsys translate_off
+// defparam \q_rtl_0|wysi_counter|counter_cell[15]~20 .clock_enable_mode = "false";
+// defparam \q_rtl_0|wysi_counter|counter_cell[15]~20 .lut_mask = "0660";
+// defparam \q_rtl_0|wysi_counter|counter_cell[15]~20 .operation_mode = "normal";
+// defparam \q_rtl_0|wysi_counter|counter_cell[15]~20 .output_mode = "comb_only";
+// defparam \q_rtl_0|wysi_counter|counter_cell[15]~20 .packed_mode = "false";
+// synopsys translate_on
+
+// atom is at LC2_F2
+flex10ke_lcell \q_rtl_0|wysi_counter|counter_cell[15]~7 (
+// Equation(s):
+// \q_rtl_0|wysi_counter|counter_cell[15]~7_combout  = \q_rtl_0|wysi_counter|counter_cell[15]~4_combout  # \q_rtl_0|wysi_counter|counter_cell[15]~5_combout  # !\q_rtl_0|wysi_counter|counter_cell[15]~20_combout  # !\en~dataout 
+
+	.dataa(\q_rtl_0|wysi_counter|counter_cell[15]~4_combout ),
+	.datab(\q_rtl_0|wysi_counter|counter_cell[15]~5_combout ),
+	.datac(\en~dataout ),
+	.datad(\q_rtl_0|wysi_counter|counter_cell[15]~20_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.clk(gnd),
+	.cin(gnd),
+	.cascin(vcc),
+	.modesel(7'b1000001),
+	.combout(\q_rtl_0|wysi_counter|counter_cell[15]~7_combout ),
+	.regout(),
+	.cout(),
+	.cascout(),
+	.pathsel(10'b0000001111));
+// synopsys translate_off
+// defparam \q_rtl_0|wysi_counter|counter_cell[15]~7 .clock_enable_mode = "false";
+// defparam \q_rtl_0|wysi_counter|counter_cell[15]~7 .lut_mask = "efff";
+// defparam \q_rtl_0|wysi_counter|counter_cell[15]~7 .operation_mode = "normal";
+// defparam \q_rtl_0|wysi_counter|counter_cell[15]~7 .output_mode = "comb_only";
+// defparam \q_rtl_0|wysi_counter|counter_cell[15]~7 .packed_mode = "false";
+// synopsys translate_on
+
+// atom is at LC3_F1
+flex10ke_lcell \q_rtl_0|wysi_counter|counter_cell[15]~18 (
+// Equation(s):
+// \q_rtl_0|wysi_counter|counter_cell[15]~50  = \q_rtl_0|wysi_counter|counter_cell[10]~regout  & !\Add0|adder|result_node|cs_buffer[10]~combout  & (\q_rtl_0|wysi_counter|counter_cell[9]~regout  $ \Add0|adder|result_node|cs_buffer[9]~combout ) # 
+// !\q_rtl_0|wysi_counter|counter_cell[10]~regout  & \Add0|adder|result_node|cs_buffer[10]~combout  & (\q_rtl_0|wysi_counter|counter_cell[9]~regout  $ \Add0|adder|result_node|cs_buffer[9]~combout )
+
+	.dataa(\q_rtl_0|wysi_counter|counter_cell[10]~regout ),
+	.datab(\Add0|adder|result_node|cs_buffer[10]~combout ),
+	.datac(\q_rtl_0|wysi_counter|counter_cell[9]~regout ),
+	.datad(\Add0|adder|result_node|cs_buffer[9]~combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.clk(gnd),
+	.cin(gnd),
+	.cascin(vcc),
+	.modesel(7'b1000001),
+	.combout(\q_rtl_0|wysi_counter|counter_cell[15]~18_combout ),
+	.regout(),
+	.cout(),
+	.cascout(\q_rtl_0|wysi_counter|counter_cell[15]~50 ),
+	.pathsel(10'b0000001111));
+// synopsys translate_off
+// defparam \q_rtl_0|wysi_counter|counter_cell[15]~18 .clock_enable_mode = "false";
+// defparam \q_rtl_0|wysi_counter|counter_cell[15]~18 .lut_mask = "0660";
+// defparam \q_rtl_0|wysi_counter|counter_cell[15]~18 .operation_mode = "normal";
+// defparam \q_rtl_0|wysi_counter|counter_cell[15]~18 .output_mode = "none";
+// defparam \q_rtl_0|wysi_counter|counter_cell[15]~18 .packed_mode = "false";
+// synopsys translate_on
+
+// atom is at LC4_F1
+flex10ke_lcell \q_rtl_0|wysi_counter|counter_cell[15]~21 (
+// Equation(s):
+// \q_rtl_0|wysi_counter|counter_cell[15]~21_combout  = (\q_rtl_0|wysi_counter|counter_cell[1]~regout  & !\Add0|adder|result_node|cs_buffer[1]~combout  & (\q_rtl_0|wysi_counter|counter_cell[14]~regout  $ \Add0|adder|result_node|cs_buffer[14]~combout ) # 
+// !\q_rtl_0|wysi_counter|counter_cell[1]~regout  & \Add0|adder|result_node|cs_buffer[1]~combout  & (\q_rtl_0|wysi_counter|counter_cell[14]~regout  $ \Add0|adder|result_node|cs_buffer[14]~combout )) & CASCADE(\q_rtl_0|wysi_counter|counter_cell[15]~50 )
+
+	.dataa(\q_rtl_0|wysi_counter|counter_cell[1]~regout ),
+	.datab(\Add0|adder|result_node|cs_buffer[1]~combout ),
+	.datac(\q_rtl_0|wysi_counter|counter_cell[14]~regout ),
+	.datad(\Add0|adder|result_node|cs_buffer[14]~combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.clk(gnd),
+	.cin(gnd),
+	.cascin(\q_rtl_0|wysi_counter|counter_cell[15]~50 ),
+	.modesel(7'b1000001),
+	.combout(\q_rtl_0|wysi_counter|counter_cell[15]~21_combout ),
+	.regout(),
+	.cout(),
+	.cascout(),
+	.pathsel(10'b0000001111));
+// synopsys translate_off
+// defparam \q_rtl_0|wysi_counter|counter_cell[15]~21 .clock_enable_mode = "false";
+// defparam \q_rtl_0|wysi_counter|counter_cell[15]~21 .lut_mask = "0660";
+// defparam \q_rtl_0|wysi_counter|counter_cell[15]~21 .operation_mode = "normal";
+// defparam \q_rtl_0|wysi_counter|counter_cell[15]~21 .output_mode = "comb_only";
+// defparam \q_rtl_0|wysi_counter|counter_cell[15]~21 .packed_mode = "false";
+// synopsys translate_on
+
+// atom is at LC1_F1
+flex10ke_lcell \q_rtl_0|wysi_counter|counter_cell[15]~9 (
+// Equation(s):
+// \q_rtl_0|wysi_counter|counter_cell[15]~9_combout  = \q_rtl_0|wysi_counter|counter_cell[15]~2_combout  # \q_rtl_0|wysi_counter|counter_cell[15]~3_combout  # \q_rtl_0|wysi_counter|counter_cell[15]~7_combout  # 
+// !\q_rtl_0|wysi_counter|counter_cell[15]~21_combout 
+
+	.dataa(\q_rtl_0|wysi_counter|counter_cell[15]~2_combout ),
+	.datab(\q_rtl_0|wysi_counter|counter_cell[15]~3_combout ),
+	.datac(\q_rtl_0|wysi_counter|counter_cell[15]~7_combout ),
+	.datad(\q_rtl_0|wysi_counter|counter_cell[15]~21_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.clk(gnd),
+	.cin(gnd),
+	.cascin(vcc),
+	.modesel(7'b1000001),
+	.combout(\q_rtl_0|wysi_counter|counter_cell[15]~9_combout ),
+	.regout(),
+	.cout(),
+	.cascout(),
+	.pathsel(10'b0000001111));
+// synopsys translate_off
+// defparam \q_rtl_0|wysi_counter|counter_cell[15]~9 .clock_enable_mode = "false";
+// defparam \q_rtl_0|wysi_counter|counter_cell[15]~9 .lut_mask = "feff";
+// defparam \q_rtl_0|wysi_counter|counter_cell[15]~9 .operation_mode = "normal";
+// defparam \q_rtl_0|wysi_counter|counter_cell[15]~9 .output_mode = "comb_only";
+// defparam \q_rtl_0|wysi_counter|counter_cell[15]~9 .packed_mode = "false";
+// synopsys translate_on
+
+// atom is at LC6_F1
+flex10ke_lcell \cout~2 (
+// Equation(s):
+// \cout~2_combout  = !\q_rtl_0|wysi_counter|counter_cell[15]~9_combout 
+
+	.dataa(vcc),
+	.datab(vcc),
+	.datac(vcc),
+	.datad(\q_rtl_0|wysi_counter|counter_cell[15]~9_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.clk(gnd),
+	.cin(gnd),
+	.cascin(vcc),
+	.modesel(7'b1000001),
+	.combout(\cout~2_combout ),
+	.regout(),
+	.cout(),
+	.cascout(),
+	.pathsel(10'b0000001000));
+// synopsys translate_off
+// defparam \cout~2 .clock_enable_mode = "false";
+// defparam \cout~2 .lut_mask = "00ff";
+// defparam \cout~2 .operation_mode = "normal";
+// defparam \cout~2 .output_mode = "comb_only";
+// defparam \cout~2 .packed_mode = "false";
+// synopsys translate_on
+
+// atom is at LC8_F1
+flex10ke_lcell \cout~reg0 (
+// Equation(s):
+// \cout~reg0_regout  = DFFEA(!\cout~reg0_regout , GLOBAL(\clk~dataout ), , , \cout~2_combout , , )
+
+	.dataa(\cout~2_combout ),
+	.datab(vcc),
+	.datac(vcc),
+	.datad(\cout~reg0_regout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.clk(\clk~dataout ),
+	.cin(gnd),
+	.cascin(vcc),
+	.modesel(7'b0100001),
+	.combout(),
+	.regout(\cout~reg0_regout ),
+	.cout(),
+	.cascout(),
+	.pathsel(10'b0000001000));
+// synopsys translate_off
+// defparam \cout~reg0 .clock_enable_mode = "true";
+// defparam \cout~reg0 .lut_mask = "00ff";
+// defparam \cout~reg0 .operation_mode = "normal";
+// defparam \cout~reg0 .output_mode = "reg_only";
+// defparam \cout~reg0 .packed_mode = "false";
+// synopsys translate_on
+
+// atom is at PIN_134
+flex10ke_io \q[0]~I (
+	.datain(\q_rtl_0|wysi_counter|counter_cell[0]~regout ),
+	.clk(gnd),
+	.ena(vcc),
+	.aclr(gnd),
+	.oe(vcc),
+	.modesel(11'b10010000010),
+	.dataout(),
+	.padio(q[0]));
+// synopsys translate_off
+// defparam \q[0]~I .feedback_mode = "none";
+// defparam \q[0]~I .operation_mode = "output";
+// defparam \q[0]~I .reg_source_mode = "none";
+// synopsys translate_on
+
+// atom is at PIN_102
+flex10ke_io \q[1]~I (
+	.datain(\q_rtl_0|wysi_counter|counter_cell[1]~regout ),
+	.clk(gnd),
+	.ena(vcc),
+	.aclr(gnd),
+	.oe(vcc),
+	.modesel(11'b10010000010),
+	.dataout(),
+	.padio(q[1]));
+// synopsys translate_off
+// defparam \q[1]~I .feedback_mode = "none";
+// defparam \q[1]~I .operation_mode = "output";
+// defparam \q[1]~I .reg_source_mode = "none";
+// synopsys translate_on
+
+// atom is at PIN_27
+flex10ke_io \q[2]~I (
+	.datain(\q_rtl_0|wysi_counter|counter_cell[2]~regout ),
+	.clk(gnd),
+	.ena(vcc),
+	.aclr(gnd),
+	.oe(vcc),
+	.modesel(11'b10010000010),
+	.dataout(),
+	.padio(q[2]));
+// synopsys translate_off
+// defparam \q[2]~I .feedback_mode = "none";
+// defparam \q[2]~I .operation_mode = "output";
+// defparam \q[2]~I .reg_source_mode = "none";
+// synopsys translate_on
+
+// atom is at PIN_113
+flex10ke_io \q[3]~I (
+	.datain(\q_rtl_0|wysi_counter|counter_cell[3]~regout ),
+	.clk(gnd),
+	.ena(vcc),
+	.aclr(gnd),
+	.oe(vcc),
+	.modesel(11'b10010000010),
+	.dataout(),
+	.padio(q[3]));
+// synopsys translate_off
+// defparam \q[3]~I .feedback_mode = "none";
+// defparam \q[3]~I .operation_mode = "output";
+// defparam \q[3]~I .reg_source_mode = "none";
+// synopsys translate_on
+
+// atom is at PIN_160
+flex10ke_io \q[4]~I (
+	.datain(\q_rtl_0|wysi_counter|counter_cell[4]~regout ),
+	.clk(gnd),
+	.ena(vcc),
+	.aclr(gnd),
+	.oe(vcc),
+	.modesel(11'b10010000010),
+	.dataout(),
+	.padio(q[4]));
+// synopsys translate_off
+// defparam \q[4]~I .feedback_mode = "none";
+// defparam \q[4]~I .operation_mode = "output";
+// defparam \q[4]~I .reg_source_mode = "none";
+// synopsys translate_on
+
+// atom is at PIN_101
+flex10ke_io \q[5]~I (
+	.datain(\q_rtl_0|wysi_counter|counter_cell[5]~regout ),
+	.clk(gnd),
+	.ena(vcc),
+	.aclr(gnd),
+	.oe(vcc),
+	.modesel(11'b10010000010),
+	.dataout(),
+	.padio(q[5]));
+// synopsys translate_off
+// defparam \q[5]~I .feedback_mode = "none";
+// defparam \q[5]~I .operation_mode = "output";
+// defparam \q[5]~I .reg_source_mode = "none";
+// synopsys translate_on
+
+// atom is at PIN_29
+flex10ke_io \q[6]~I (
+	.datain(\q_rtl_0|wysi_counter|counter_cell[6]~regout ),
+	.clk(gnd),
+	.ena(vcc),
+	.aclr(gnd),
+	.oe(vcc),
+	.modesel(11'b10010000010),
+	.dataout(),
+	.padio(q[6]));
+// synopsys translate_off
+// defparam \q[6]~I .feedback_mode = "none";
+// defparam \q[6]~I .operation_mode = "output";
+// defparam \q[6]~I .reg_source_mode = "none";
+// synopsys translate_on
+
+// atom is at PIN_131
+flex10ke_io \q[7]~I (
+	.datain(\q_rtl_0|wysi_counter|counter_cell[7]~regout ),
+	.clk(gnd),
+	.ena(vcc),
+	.aclr(gnd),
+	.oe(vcc),
+	.modesel(11'b10010000010),
+	.dataout(),
+	.padio(q[7]));
+// synopsys translate_off
+// defparam \q[7]~I .feedback_mode = "none";
+// defparam \q[7]~I .operation_mode = "output";
+// defparam \q[7]~I .reg_source_mode = "none";
+// synopsys translate_on
+
+// atom is at PIN_99
+flex10ke_io \q[8]~I (
+	.datain(\q_rtl_0|wysi_counter|counter_cell[8]~regout ),
+	.clk(gnd),
+	.ena(vcc),
+	.aclr(gnd),
+	.oe(vcc),
+	.modesel(11'b10010000010),
+	.dataout(),
+	.padio(q[8]));
+// synopsys translate_off
+// defparam \q[8]~I .feedback_mode = "none";
+// defparam \q[8]~I .operation_mode = "output";
+// defparam \q[8]~I .reg_source_mode = "none";
+// synopsys translate_on
+
+// atom is at PIN_100
+flex10ke_io \q[9]~I (
+	.datain(\q_rtl_0|wysi_counter|counter_cell[9]~regout ),
+	.clk(gnd),
+	.ena(vcc),
+	.aclr(gnd),
+	.oe(vcc),
+	.modesel(11'b10010000010),
+	.dataout(),
+	.padio(q[9]));
+// synopsys translate_off
+// defparam \q[9]~I .feedback_mode = "none";
+// defparam \q[9]~I .operation_mode = "output";
+// defparam \q[9]~I .reg_source_mode = "none";
+// synopsys translate_on
+
+// atom is at PIN_162
+flex10ke_io \q[10]~I (
+	.datain(\q_rtl_0|wysi_counter|counter_cell[10]~regout ),
+	.clk(gnd),
+	.ena(vcc),
+	.aclr(gnd),
+	.oe(vcc),
+	.modesel(11'b10010000010),
+	.dataout(),
+	.padio(q[10]));
+// synopsys translate_off
+// defparam \q[10]~I .feedback_mode = "none";
+// defparam \q[10]~I .operation_mode = "output";
+// defparam \q[10]~I .reg_source_mode = "none";
+// synopsys translate_on
+
+// atom is at PIN_128
+flex10ke_io \q[11]~I (
+	.datain(\q_rtl_0|wysi_counter|counter_cell[11]~regout ),
+	.clk(gnd),
+	.ena(vcc),
+	.aclr(gnd),
+	.oe(vcc),
+	.modesel(11'b10010000010),
+	.dataout(),
+	.padio(q[11]));
+// synopsys translate_off
+// defparam \q[11]~I .feedback_mode = "none";
+// defparam \q[11]~I .operation_mode = "output";
+// defparam \q[11]~I .reg_source_mode = "none";
+// synopsys translate_on
+
+// atom is at PIN_163
+flex10ke_io \q[12]~I (
+	.datain(\q_rtl_0|wysi_counter|counter_cell[12]~regout ),
+	.clk(gnd),
+	.ena(vcc),
+	.aclr(gnd),
+	.oe(vcc),
+	.modesel(11'b10010000010),
+	.dataout(),
+	.padio(q[12]));
+// synopsys translate_off
+// defparam \q[12]~I .feedback_mode = "none";
+// defparam \q[12]~I .operation_mode = "output";
+// defparam \q[12]~I .reg_source_mode = "none";
+// synopsys translate_on
+
+// atom is at PIN_164
+flex10ke_io \q[13]~I (
+	.datain(\q_rtl_0|wysi_counter|counter_cell[13]~regout ),
+	.clk(gnd),
+	.ena(vcc),
+	.aclr(gnd),
+	.oe(vcc),
+	.modesel(11'b10010000010),
+	.dataout(),
+	.padio(q[13]));
+// synopsys translate_off
+// defparam \q[13]~I .feedback_mode = "none";
+// defparam \q[13]~I .operation_mode = "output";
+// defparam \q[13]~I .reg_source_mode = "none";
+// synopsys translate_on
+
+// atom is at PIN_37
+flex10ke_io \q[14]~I (
+	.datain(\q_rtl_0|wysi_counter|counter_cell[14]~regout ),
+	.clk(gnd),
+	.ena(vcc),
+	.aclr(gnd),
+	.oe(vcc),
+	.modesel(11'b10010000010),
+	.dataout(),
+	.padio(q[14]));
+// synopsys translate_off
+// defparam \q[14]~I .feedback_mode = "none";
+// defparam \q[14]~I .operation_mode = "output";
+// defparam \q[14]~I .reg_source_mode = "none";
+// synopsys translate_on
+
+// atom is at PIN_127
+flex10ke_io \q[15]~I (
+	.datain(\q_rtl_0|wysi_counter|counter_cell[15]~regout ),
+	.clk(gnd),
+	.ena(vcc),
+	.aclr(gnd),
+	.oe(vcc),
+	.modesel(11'b10010000010),
+	.dataout(),
+	.padio(q[15]));
+// synopsys translate_off
+// defparam \q[15]~I .feedback_mode = "none";
+// defparam \q[15]~I .operation_mode = "output";
+// defparam \q[15]~I .reg_source_mode = "none";
+// synopsys translate_on
+
+// atom is at PIN_103
+flex10ke_io \cout~I (
+	.datain(\cout~reg0_regout ),
+	.clk(gnd),
+	.ena(vcc),
+	.aclr(gnd),
+	.oe(vcc),
+	.modesel(11'b10010000010),
+	.dataout(),
+	.padio(cout));
+// synopsys translate_off
+// defparam \cout~I .feedback_mode = "none";
+// defparam \cout~I .operation_mode = "output";
+// defparam \cout~I .reg_source_mode = "none";
+// synopsys translate_on
+
+endmodule
